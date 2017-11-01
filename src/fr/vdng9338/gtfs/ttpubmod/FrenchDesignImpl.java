@@ -27,6 +27,8 @@ import org.timetablepublisher.table.Stop;
 import org.timetablepublisher.table.Footnote;
 import org.timetablepublisher.table.Row;
 import org.timetablepublisher.utils.TimeTableProperties;
+import org.timetablepublisher.view.pdf.PdfDesign;
+import org.timetablepublisher.view.pdf.PdfDesignImpl;
 
 /**
  * Modified from PdfTrimetDesignImpl.
@@ -82,11 +84,11 @@ public class FrenchPdfDesignImpl extends PdfDesignImpl implements PdfDesign
     public Font getFont(Row row, int index)
     {
         Font retVal = HELV_NORM_6;
-        if(row != null && row.getCell(index) != null)
+        /*if(row != null && row.getCell(index) != null)
         {
             if((row.getTime(index) % 86400) >= 43200)
                 retVal = HELV_BOLD_6;
-        }
+        }*/
                 
         return retVal; 
     }
@@ -128,7 +130,7 @@ public class FrenchPdfDesignImpl extends PdfDesignImpl implements PdfDesign
         
         // determine whether there's an AM / PM mark to add to time string
         String mark = null;
-        if((row.getTime(index) % 86400) >= 43200)
+        /*if((row.getTime(index) % 86400) >= 43200)
         {
             if(pm != null)
                 mark = pm;
@@ -137,10 +139,13 @@ public class FrenchPdfDesignImpl extends PdfDesignImpl implements PdfDesign
         {
             if(am != null)
                 mark = am;            
-        }
+        }*/
         
         // get time string, and append mark in appropriate place
-        String time = row.getTimeAsStr(index);
+        int timeInt = row.getTime(index);
+        int hours = (timeInt / 3600) % 24;
+        int minutes = (timeInt / 60) % 60;
+        String time = hours + ":" + minutes;
         if(mark != null)
         {
             if(toRight)
@@ -169,7 +174,7 @@ public class FrenchPdfDesignImpl extends PdfDesignImpl implements PdfDesign
         border.setBorderColor(Color.BLACK);
         
         // table bottom bar & easter egg watermark 
-        PdfPCell space = makeCell("TimeTablePublisher.com : PDF generation   created by Frank Purcell.",
+        PdfPCell space = makeCell("TimeTablePublisher.com : Génération de PDF, créé originalement par Frank Purcell.",
                           FontFactory.getFont("Helvetica", 4, Font.BOLD, Color.WHITE),
                           Element.ALIGN_TOP, Element.ALIGN_LEFT, 
                           leading, padding, border, false, false);
