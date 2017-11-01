@@ -1,5 +1,5 @@
 [#function getProperElementName el=""]
-  [#return el?js_string?replace('&', '_')]
+  [#return el?js_string?replace('&', '_')?replace(':', '_')?replace('-', '_')]
 [/#function]
 
 
