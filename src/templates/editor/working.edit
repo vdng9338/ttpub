@@ -1,0 +1,8 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[@macros.head title="C O N F I G U R E (working) - ${timesTable.getRouteName()?default('')}" path=".."/]
+<body class="composite" onLoad="refreshParentAndClose()">
+<blink>working</blink>
+</body>
+</html>

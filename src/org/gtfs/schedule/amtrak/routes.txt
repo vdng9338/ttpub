@@ -1,0 +1,33 @@
+route_id,route_short_name,route_long_name,route_desc,route_type
+3,,27,Empire Builder - Chicago to Seattle,Spokane - Portland - Seattle,2
+3,,28,Empire Builder - Seattle to Chicago,Seattle - Portland - Spokane,2
+1,,11,Coast Starlight - Seattle to Los Angeles,VANCOUVER BC CANADA - EUGENE-SPRINGFIELD OR,2
+1,,14,Coast Starlight - Los Angeles to Seattle,EUGENE-SPRINGFIELD OR - VANCOUVER BC,2
+4,,500,Amtrak Cascades,"Eugene-Springfield, OR to Seattle, WA",2
+4,,501,Amtrak Cascades,"Seattle, WA to Portland, OR",2
+4,,504,Amtrak Cascades,"Eugene-Springfield, OR to Portland, OR",2
+4,,506,Amtrak Cascades,"Portland, OR to Seattle, WA",2
+4,,507,Amtrak Cascades,"Seattle, WA to Eugene-Springfield, OR",2
+4,,508,Amtrak Cascades,"Eugene-Springfield, OR to Seattle, WA",2
+4,,509,Amtrak Cascades,"Seattle, WA to Eugene-Springfield, OR",2
+4,,510,Amtrak Cascades,"Seattle, WA to Vancouver, BC, Canada",2
+4,,513,Amtrak Cascades,"Bellingham-Fairhaven, WA to Portland, OR",2
+4,,516,Amtrak Cascades,"Portland, OR to Bellingham-Fairhaven, WA",2
+4,,517,Amtrak Cascades,"Vancouver, BC, Canada to Seattle, WA",2
+3,,807,Empire-Builder - Spokane to Seattle,"Spokane, WA to Seattle, WA",2
+3,,808,Empire-Builder -  Seattle to Spokane,"Seattle, WA to Spokane, WA",2
+4,,5501,Amtrak Cascades,"Portland, OR to Eugene-Springfield, OR",3
+4,,5503,Amtrak Cascades,"Portland, OR to Eugene-Springfield, OR",3
+4,,5505,Amtrak Cascades,"Portland, OR to Eugene-Springfield, OR",3
+4,,8907,Amtrak Cascades,"Vancouver, BC, Canada to Seattle, WA",3
+4,,8909,Amtrak Cascades,"Vancouver, BC, Canada to Seattle, WA",3
+4,,8911,Amtrak Cascades,"Vancouver, BC, Canada to Seattle, WA",3
+4,,8900,Amtrak Cascades,"Seattle, WA to Vancouver, BC, Canada",3
+4,,8906,Amtrak Cascades,"Seattle, WA to Vancouver, BC, Canada",3
+4,,8914,Amtrak Cascades,"Seattle, WA to Vancouver, BC, Canada",3
+4,,5528,Amtrak Cascades,"Eugene-Springfield, OR to Portland, OR",3
+4,,5508,Amtrak Cascades,"Eugene-Springfield, OR to Portland, OR",3
+4,,8957,Amtrak Cascades,"Vancouver, BC, Canada to Seattle, WA",3
+4,,8948,Amtrak Cascades,"Seattle, WA to Vancouver, BC, Canada",3
+2,,8552,Valley Retriever,"Albany, OR to Portland, OR",3
+2,,8575,Valley Retriever,"Portland, OR to Albany, OR",3

@@ -1,0 +1,35 @@
+Agency,Route,Direction,Service Key,Language,"Rule: EXISTS, BEGIN_TRIP, END_TRIP",Stop ID,FN Symbol,Footnote (FN),FN Sequence
+,17,Inbound,Weekday,,EXISTS,10455,Y,From STOP.NAME (Stop ID STOP.ID).,30
+,17,Outbound,Weekday,,EXISTS,10455,Y,Continues to STOP.NAME (Stop ID STOP.ID).,30
+,17,Inbound,Saturday,,EXISTS,8870,Y,Leaves Wacker Siltronics at STOP.TIMES,30
+,17,Inbound,Sunday,,EXISTS,8870,Y,Leaves Wacker Siltronics at STOP.TIMES,30
+,17,Outbound,Saturday,,EXISTS,8870,Y,"To Wacker Siltronics at START.TIMES, arrives at STOP.TIMES",30
+,17,Outbound,Sunday,,EXISTS,8870,Y,"To Wacker Siltronics at START.TIMES, arrives at STOP.TIMES",30
+,89,Inbound,*,,EXISTS,10086,B,"via Bronson, buses travel north of Sunset Hwy.",20
+,89,Inbound,*,,EXISTS,9789,C,"via Cornell, buses travel south of Sunset Hwy.",25
+,89,Outbound,*,,EXISTS,8782,B,"via Bronson, buses travel north of Sunset Hwy.",20
+,89,Outbound,*,,EXISTS,9793,C,"via Cornell, buses travel south of Sunset Hwy.",25
+,53,Inbound,*,,EXISTS,9749,,<B>Note:</B> Trip departs Mercer Industries (Stop ID STOP.ID) at STOP.TIMES arrives END.NAME (Stop ID END.ID) at STIME.PLUS_11,30
+,53,Outbound,*,,EXISTS,9749,,<B>Note:</B>  Mercer Industries (Stop ID STOP.ID) trip departs START.NAME (Stop ID START.ID) at STIME.MINUS_9  arrives STOP.TIMES,30
+,67,Inbound,*,,EXISTS,xxx9915,,<B>Note:</B> Afternoon trip departs Cornell Oaks (Stop ID STOP.ID) at STOP.TIMES; arrives at Merlo/SW 158th Ave. MAX Station (Stop ID 10126) at STIME.PLUS_12,30
+,67,Outbound,*,,EXISTS,9915,Y,Trip serves Cornell Oaks/Greenbriar Parkway.,20
+,15,Inbound,*,,BEGIN_TRIP,10434,Y,Trip begins at STOP.NAME (Stop ID STOP.ID),20
+,15,Outbound,Weekday,,END_TRIP,6171,Y,Trip ends at STOP.NAME (Stop ID STOP.ID),20
+,15,Outbound,Sunday,,END_TRIP,10434,Y,Trip ends at STOP.NAME (Stop ID STOP.ID),20
+,190,Inbound,*,,END_TRIP,11507,Y,"At STOP.NAME (Stop ID STOP.ID), train turns eastward and travels to Ruby Junction/E 197th Ave Station.",25
+,190,Outbound,*,,BEGIN_TRIP,10642,X,Train originates from Ruby Junction/E 197th Ave Station thirty minutes prior to the STOP.NAME.,15
+,190,Outbound,*,,BEGIN_TRIP,9828,Y,Train originates from STOP.NAME (Stop ID STOP.ID) thirty minutes prior to the Pioneer Square South time.,20
+,190,Outbound,*,,BEGIN_TRIP,9848,Z,Train originates from STOP.NAME (Stop ID STOP.ID) fifty minutes prior to the Pioneer Square South time.,25
+,96,Outbound,Weekday,,END_TRIP,8274,,"On this trip, the bus will not serve the last three bus stops before the Mohawk Park & Ride; Martinazzi & Martinazzi Square, Martinazzi & Warm Springs and Martinazzi & Mohawk.",40
+,100,Inbound,*,,END_TRIP,8377,Y,Yellow Line train bound for Expo Center; does not travel to City Center,30
+,100,Inbound,Weekday,,END_TRIP_MARK_STOP_AFTER_24:30,9829,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Hillsboro Transit Center, ride bus Line 57 from Beaverton Transit Center.",45
+,100,Inbound,Saturday,,END_TRIP_MARK_STOP_AFTER_25:00,9829,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Hillsboro Transit Center, ride bus Line 57 from Beaverton Transit Center.",45
+,100,Inbound,Sunday,,END_TRIP_MARK_STOP_AFTER_23:30,9829,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Hillsboro Transit Center, ride bus Line 57 from Beaverton Transit Center.",45
+,100,Outbound,Weekday,,END_TRIP_MARK_STOP_AFTER_25:00,8355,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Gresham Transit Center, ride bus Line 20 from Rockwood Transit Center.",51
+,100,Outbound,Saturday,,END_TRIP_MARK_STOP_AFTER_24:00,8355,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Gresham Transit Center, ride bus Line 20 from Rockwood Transit Center.",51
+,100,Outbound,Sunday,,END_TRIP_MARK_STOP_AFTER_24:00,8355,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Gresham Transit Center, ride bus Line 20 from Rockwood Transit Center.",51
+,100,Outbound,Weekday,,END_TRIP_BETWEEN_25:20_AND_25:50,9830,X,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For later service to Beaverton Transit Center, ride bus Line 57 from Hillsboro Transit Center.",40
+,100,Outbound,Weekday,,END_TRIP_AFTER_25:35,9830,Z,This trip ends at STOP.NAME (Stop ID STOP.ID).  There is no alternate eastbound service to Beaverton or Portland City Center.,50
+,100,Outbound,Saturday,,END_TRIP_BETWEEN_24:20_AND_25:20,9830,X,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For later service to Beaverton Transit Center, ride bus Line 57 from Hillsboro Transit Center.",40
+,100,Outbound,Saturday,,END_TRIP_AFTER_25:20,9830,Z,This trip ends at STOP.NAME (Stop ID STOP.ID).  There is no alternate eastbound service to Beaverton or Portland City Center.,50
+,100,Outbound,Sunday,,END_TRIP_AFTER_22:20,9830,X,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For later service to Beaverton Transit Center, ride bus Line 57 from Hillsboro Transit Center.",40

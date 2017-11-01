@@ -1,0 +1,8 @@
+"Agency","Route","Direction","Service Key","Language","Rule: EXISTS, BEGIN_TRIP, END_TRIP","Stop ID","FN Symbol","Footnote (FN)","FN Sequence"
+"Northwestern Trailways","3","East","*","","BEGIN_TRIP","TAC","T","Trip begins at STOP.NAME (Stop ID STOP.ID)","20"
+"Northwestern Trailways","3","West","*","","END_TRIP_MARK_STOP","TAC","*","This trip ends at STOP.NAME (Stop ID STOP.ID).","40"
+"Greyhound","3","North","*","","EXISTS","780440","*","Trip stops at STOP.NAME (Stop ID STOP.ID).","40"
+"Greyhound","3","South","*","","EXISTS","780440","*","Trip stops at STOP.NAME (Stop ID STOP.ID).","40"
+"Island Transit","1","North","*","","EXISTS","RT6ST27B","*","Trip stops at STOP.NAME (Stop ID STOP.ID) at STOP.TIMES","40"
+"Amtrak Cascades","4","North","*","","END_TRIP","BEL","B","Trip ends at STOP.NAME (Stop ID STOP.ID).","20"
+"Amtrak Cascades","4","North","*","","EXISTS","ORC","O","Trip stops at STOP.NAME (Stop ID STOP.ID).","25"

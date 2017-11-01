@@ -1,0 +1,11 @@
+stop_id,stop_name,stop_description,stop_lat,stop_lon,stop_street,stop_city,stop_region,stop_postalcode,stop_country
+NAS,NAS Whidbey BEQ 2701,http://www.seatacshuttle.com/stopInfo.php,48.342,-122.672,Intruder ST,NAS Whidbey,WA,98278,US
+HAR,Harbor Station,http://www.seatacshuttle.com/stopInfo.php,48.288,-122.648,790 SE Bayshore DR,Oak Harbor ,WA,98277,US
+OAK,7-11 Mini-Mart,http://www.seatacshuttle.com/stopInfo.php,48.286,-122.66,31300 SR20,Oak Harbor ,WA,98277,US
+COU,Liberty Exxon,http://www.seatacshuttle.com/stopInfo.php,48.212,-122.686,1 Main ST,Coupeville,WA,98239,US
+GRE,Greenbank Store,http://www.seatacshuttle.com/stopInfo.php,48.099,-122.574,25189 SR525,Greenbank,WA,98253,US
+FRE,Freeland Shell,http://www.seatacshuttle.com/stopInfo.php,48.008,-122.531,5618 Fish RD,Freeland,WA,98249,US
+BAY,Bayview Exxon,http://www.seatacshuttle.com/stopInfo.php,48.001,-122.459,14481 SR525,Langley ,WA,98260,US
+LAN,Naomi's Exxon,http://www.seatacshuttle.com/stopInfo.php,47.994,-122.399,11196 SR525,Langley,WA,98260,US
+CLI,Clinton Ferry,http://www.seatacshuttle.com/stopInfo.php,47.974167,-122.348953,64 South Ferrydock Road,Clinton,WA,98236,US
+SEA,SEATAC Airport,http://www.seatacshuttle.com/stopInfo.php,47.443,-122.301,SeaTac Airport Main Terminal,Seatac,WA,98188,US

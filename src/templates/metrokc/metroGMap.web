@@ -1,0 +1,28 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[#import "../include/mapMacros.ftl" as mapMacros]
+[#import "metroMacros.ftl" as metMacs]
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML LANG="en">
+<HEAD>
+  [@metMacs.mainHead /]
+  [@mapMacros.gMapsKey/]
+  [@mapMacros.mapStyle/]
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#ffffff" LINK="#0000CC" VLINK="#666666" MARGINHEIGHT="10" TOPMARGIN="10" MARGINWIDTH="0" LEFTMARGIN="0" CLASS="bg">
+
+[@metMacs.mainBodyTOP /]
+
+  <div id="map" style="width: 770px; height: 300px; border: thin solid #6688AA;"></div>
+  [@mapMacros.mapTimesTable columns=timesTable.getTimePoints() showStopIDs=timesTable.showStopIDs() rows=timesTable.getTimeTable() tableStyle="its" /]
+  [@mapMacros.gMapsCode/]
+  [@macros.footnotes noteList=timesTable.getFootnotes() caption="Footnotes:"/]
+
+[@metMacs.mainBodyBOTTOM /]
+
+
+
+</body>
+</html>

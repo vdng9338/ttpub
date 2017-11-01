@@ -1,0 +1,21 @@
+[#ftl]
+[#import  "../include/functions.ftl" as funct]
+[#import  "../include/macros.ftl"    as macros]
+[#include "../include/constants.ftl"]
+[#include "webPageMacros.ftl"]
+[@head/]
+</head>
+<body>
+  <div id="container">
+  [@header/]
+    [@startContent/]
+      [@columnFour/]
+      [@title/]
+      [@links fromHorizontalPage=true/]  
+      [@horizontalTimesTable/]
+    [@endContent/]
+  [@footer/]
+  </div> <!-- id="container" -->
+  [@analytics/]
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Modelistic Software Ltd. (http://www.modelistic.com) -->
+<jme>
+	<diagram style="standardStyles.diagramStyle.dependencies" version="1.3.7">
+		<class yLocation="-1313" xLocation="2585" project="openSchedule" className="org.trimet.openSchedule.table.TimesTable"/>
+		<class yLocation="-1094" xLocation="3624" project="openSchedule" className="org.trimet.openSchedule.view.web.TimeTableServlet"/>
+		<class yLocation="-1095" xLocation="4530" project="openSchedule" className="org.trimet.openSchedule.view.web.PrintTimeTablesServlet"/>
+		<class yLocation="-1098" xLocation="3350" project="openSchedule" className="org.trimet.openSchedule.view.web.PdfServlet"/>
+		<class yLocation="-2211" xLocation="4223" project="openSchedule" className="org.trimet.openSchedule.view.web.FreemarkerBaseServlet"/>
+		<class yLocation="-1095" xLocation="4242" project="openSchedule" className="org.trimet.openSchedule.view.web.ConfigureServlet"/>
+		<class yLocation="-1098" xLocation="3979" project="openSchedule" className="org.trimet.openSchedule.view.web.CompareServlet"/>
+		<class yLocation="-318" xLocation="3285" project="openSchedule" className="org.trimet.openSchedule.view.pdf.PdfMultiTableDoc"/>
+		<class yLocation="50" xLocation="3246" project="openSchedule" className="org.trimet.openSchedule.view.pdf.PdfDesign"/>
+	</diagram>
+</jme>

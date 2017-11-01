@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN"
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <mime-mapping>
+        <extension>css</extension>
+        <mime-type>text/css</mime-type>
+    </mime-mapping>
+
+    <servlet>
+      <servlet-name>pdf</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.PdfServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>pdf</servlet-name>
+      <url-pattern>/pdf/*</url-pattern>
+    </servlet-mapping>  
+
+    <servlet>
+      <servlet-name>gtfs</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.SchedDataServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>gtfs</servlet-name>
+      <url-pattern>/gtfs/*</url-pattern>
+    </servlet-mapping>  
+
+    <servlet>
+      <servlet-name>csveditor</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.CSVEditorServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>csveditor</servlet-name>
+      <url-pattern>*.edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>view</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.ViewServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>view</servlet-name>
+      <url-pattern>*.ftl</url-pattern>
+    </servlet-mapping>  
+    <servlet-mapping>
+      <servlet-name>view</servlet-name>
+      <url-pattern>*.web</url-pattern>
+    </servlet-mapping>  
+
+
+    <servlet>
+      <servlet-name>print</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.PrintTimeTablesServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>print</servlet-name>
+      <url-pattern>*.print</url-pattern>
+    </servlet-mapping>  
+
+   <servlet>
+      <servlet-name>compare</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.CompareServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>compare</servlet-name>
+      <url-pattern>*.compare</url-pattern>
+    </servlet-mapping>  
+
+    <servlet>
+      <servlet-name>config</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.ConfigureServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>config</servlet-name>
+      <url-pattern>*.config</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>testrunner</servlet-name>
+      <servlet-class>org.timetablepublisher.view.web.TestRunnerServlet</servlet-class>
+      <!-- FreemarkerServlet settings: -->
+      <init-param>
+	    <param-name>TemplatePath</param-name>
+	    <param-value>templates</param-value>
+      </init-param>
+      <init-param>
+	    <param-name>NoCache</param-name>
+	    <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>ContentType</param-name>
+        <param-value>text/html</param-value>
+      </init-param>
+      <init-param>
+        <param-name>template_update_delay</param-name>
+        <param-value>10</param-value> <!-- 0 is for development only! Use higher value otherwise. -->
+      </init-param>
+      <init-param>
+        <param-name>default_encoding</param-name>
+        <param-value>ISO-8859-1</param-value>
+      </init-param>
+      <init-param>
+        <param-name>number_format</param-name>
+        <param-value>0.##########</param-value>
+      </init-param>
+      <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>testrunner</servlet-name>
+      <url-pattern>*.suite</url-pattern>
+    </servlet-mapping>      
+</web-app>

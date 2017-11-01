@@ -1,0 +1,21 @@
+Route,Direction,Service Key,Language,Rule,Stop ID / Route,Symbol,Footnote,Sequence,,
+17,Inbound,"Saturday, Sunday",en,EXISTS,8870,Y,Leaves Wacker Siltronics at STOP.TIMES,30,,
+17,Outbound,"Saturday, Sunday",en,EXISTS,8870,Y,"To Wacker Siltronics at START.TIMES, arrives at STOP.TIMES",30,,
+89,Inbound,"Weekday, Saturday, Sunday",en,EXISTS,10086,B,"via Bronson, busses travel north of Sunset Hwy.",20,,"NOTE: for 89 Tanisborne, there's also a MERGE rule to align the times for stops 10039 & 10056 Evergreen Pkwy & Town Center Dr into a single column.  See MergeRules.csv"
+89,Inbound,"Weekday, Saturday, Sunday",en,EXISTS,9789,C,"via Cornell, busses travel south of Sunset Hwy.",25,,
+89,Outbound,"Weekday, Saturday, Sunday",en,EXISTS,8782,B,"via Bronson, busses travel north of Sunset Hwy.",20,,
+89,Outbound,"Weekday, Saturday, Sunday",en,EXISTS,9793,C,"via Cornell, busses travel south of Sunset Hwy.",25,,
+53,Inbound,"Weekday, Saturday, Sunday",en,EXISTS,9749,,<B>Note:</B> Trip departs Mercer Industries (Stop ID STOP.ID) at STOP.TIMES arrives END.NAME (Stop ID END.ID) at STIME.PLUS_11,30,,"NOTE: we're using STIME.PLUS_ and STIME.MINUS_ tokens.  The Number at the end of these tokens (eg: STIME.PLUS_11) represents the number of minutes to +/- to STOP.TIMES, and it can be changed here to adjust the trip time between STOP.TIMES and the start/end point."
+53,Outbound,"Weekday, Saturday, Sunday",en,EXISTS,9749,,<B>Note:</B>  Mercer Industries (Stop ID STOP.ID) trip departs START.NAME (Stop ID START.ID) at STIME.MINUS_9  arrives STOP.TIMES,30,,"NOTE: the PLUS_ and MINUS_ parameters are a bit of a hack…but getting the times directly from the schedule is a too complex at this point of the processing.  Since we aren't showing these trips in the table, we don't have those times to display (thus, the +/- hack) in the footnotes."
+67,Inbound,"Weekday, Saturday, Sunday",en,EXISTS,9915,,<B>Note:</B> Afternoon trip departs Cornell Oaks (Stop ID STOP.ID) at STOP.TIMES; arrives at Merlo/SW 158th Ave. MAX Station (Stop ID 10126) at STIME.PLUS_12,30,,
+67,Outbound,"Weekday, Saturday, Sunday",en,EXISTS,9915,Y,Trip serves Cornell Oaks/Greenbriar Parkway.,20,,
+15,Inbound,"Weekday, Saturday, Sunday",en,BEGIN_TRIP,5394,Y,Trip begins at STOP.NAME (Stop ID STOP.ID),20,,
+15,Outbound,Weekday,en,END_TRIP,6171,Y,Trip ends at STOP.NAME (Stop ID STOP.ID),20,,
+15,Outbound,Sunday,en,END_TRIP,10434,Y,Trip ends at STOP.NAME (Stop ID STOP.ID),20,,
+190,Inbound,"Weekday, Saturday, Sunday",en,END_TRIP,11507,Y,"At STOP.NAME (Stop ID STOP.ID), train turns eastward and travels to Ruby Junction/E 197th Ave Station.",25,,
+190,Outbound,"Weekday, Saturday, Sunday",en,BEGIN_TRIP,8377,X,Train originates from Ruby Junction/E 197th Ave Station thirty minutes prior to the STOP.NAME.,15,,
+190,Outbound,"Weekday, Saturday, Sunday",en,BEGIN_TRIP,9828,Y,Train originates from STOP.NAME (Stop ID STOP.ID) thirty minutes prior to the Pioneer Square South time.,20
+190,Outbound,"Weekday, Saturday, Sunday",en,BEGIN_TRIP,9848,Z,Train originates from STOP.NAME (Stop ID STOP.ID) fifty minutes prior to the Pioneer Square South time.,25
+100,Inbound,"Weekday, Saturday, Sunday",en,END_TRIP,8377,Y,Yellow Line train bound for Expo Center; does not travel to City Center,30
+100,Inbound,"Weekday, Saturday, Sunday",en,END_TRIP_MARK_STOP,9829,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Hillsboro Transit Center, ride bus Line 57 from Beaverton Transit Center.",40
+100,Outbound,"Weekday, Saturday, Sunday",en,END_TRIP_MARK_STOP,8355,*,"This trip ends at STOP.NAME (Stop ID STOP.ID).  For service to Gresham Transit Center, ride bus Line 20 from Rockwood Transit Center.",40

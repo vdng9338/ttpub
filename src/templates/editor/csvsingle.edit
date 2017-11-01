@@ -1,0 +1,55 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[@macros.head title="C O N F I G U R E (csv editor) - ${timesTable.getRouteName()?default('')}" path=".."/]
+<body class="composite">
+[@macros.navBar path=".."/]
+<FORM action="csvsingle.edit" method="get">
+  [@csvDropDown csvList=csvList/]
+  [#if RequestParameters?exists && RequestParameters.method?exists ]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]  
+</FORM>
+
+[#assign qS  = queryString?default("new=true")]
+[#assign csv = RequestParameters.csvFileName?default("")]
+<H1>File: ${csvFileName?default("please select from above")}</H1>
+[#if csvColNames?exists]
+<table class="its">
+  <thead>
+    <tr>
+      <td><a href="javascript:openPopUp('csvrow.edit?editID=NEW&csvFileName=${csv}&${qS}')"><B> ADD </B></a></td>
+      [#list csvColNames as c]<th title="${c.details()}">${c.name()}</th>[/#list]
+    </tr>
+  </thead>
+  <tbody>
+  [#if csvData?exists]
+    [#assign rowNum = 1]
+    [#list csvData as d]
+    ${funct.getTr(rowNum, "odd", "even")} 
+      <td><a href="javascript:openPopUp('csvrow.edit?editID=${d.hashCode()}&csvFileName=${csv}&${qS}')">edit</a></td>
+      [#list d.getFieldValues() as f]<td>${f?default("")}</td> [/#list]
+    </tr>
+    [#assign rowNum = 1 + rowNum]
+    [/#list]
+  [/#if]
+  </tbody>
+</table>
+[/#if]
+</body>
+</html>
+
+[#macro csvDropDown csvList submit="true"]
+<p>
+  <select class="csvDropDown" name="csvFileName">
+    <option disabled selected>Please select a CSV file to Edit</option>
+    [#list csvList as c]
+       <OPTION VALUE="${c}">${c}</OPTION>
+    [/#list]
+  </select>
+  [#if submit != "false"]
+    <input type="submit" value="submit"/>
+  [/#if]
+</p>
+[/#macro]
+

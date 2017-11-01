@@ -1,0 +1,6 @@
+"Agency","Route","Direction","Service Key","Language","Rule: BEGIN_TRIP, END_TRIP, VERTICULL","Start","Finish","Buffer"
+"Greyhound","2","*","*","jp","END_TRIP","16","23",
+"Capital Metro","55261","Outbound","*","","VERTICULL","0","0",
+"Capital Metro","53990","Outbound","*","","VERTICULL","0","0",
+"Capital Metro","53910","Outbound","*","","BLOCKCULL","0","0",
+"Capital Metro","54250","Outbound","*","","BLOCKCULL","0","0",

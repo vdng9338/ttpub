@@ -1,0 +1,120 @@
+[#ftl]
+[#import "include/functions.ftl" as funct]
+[#import "include/macros.ftl"    as macros]
+[@macros.head title="T E S T   R U N N E R" terminate=false/]
+  <SCRIPT LANGUAGE="JavaScript" SRC="js/OptionTransfer.js"></SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript">
+    var appOpt = new OptionTransfer("appTestsLeft", "appTests");
+    appOpt.setAutoSort(false);
+    appOpt.setDelimiter(",");
+
+    var webOpt = new OptionTransfer("webTestsLeft", "webTests");
+    webOpt.setAutoSort(false);
+    webOpt.setDelimiter(",");
+  </SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function toggleCheckBoxes(sw)
+    {
+        sw.togSw = !sw.togSw;
+
+        var form = document.getElementById('submitForm');
+        var target = sw.name;
+        for(var j=0; j < form.elements.length; j++)
+        {
+            el = form.elements[j];
+            if(el.name.indexOf(target) >= 0) 
+            {
+                el.checked=sw.togSw;
+            }
+        }
+    }
+  -->
+  </SCRIPT>
+</head>
+<body class="composite" onLoad="appOpt.init(document.forms[0]); webOpt.init(document.forms[0])">
+
+<FORM id="submitForm" action="testRunner.suite" method="POST" onSubmit="selectAllOptions(appTests); selectAllOptions(webTests);">
+  [@macros.navBar selectedPage="testRunner.suite"/]
+  [#if RequestParameters?exists && RequestParameters.method?exists && !RequestParameters.method?matches("MOCK") ]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]
+<p>
+  [#if testDir?exists && testSuiteList?has_content]
+  <H2>Suite Runner</H2>    
+  <table>
+    <tr>
+      <th>View Test Source</th>
+      <th title="Requires Firefox and the Selenium IDE (http://www.openqa.org/selenium-ide/) plugin installed.">Run Selenium Test Suite</th>
+      <th>delete?</th>
+    </tr>
+    [#assign appURL = appURL?default("http://localhost:8080/")]
+    [#assign webURL = webURL?default("http://dev/")]
+
+    [#list testSuiteList as f]
+    [#assign testURL = testDirURL?default("http://localhost:8080/ttpub/tests/") + "/" + f.getName()]
+    [#assign baseURL = webURL]
+    [#if f.getName()?contains("App")]
+        [#assign baseURL = appURL]
+    [/#if]
+    <tr>
+      <td><div align="left">[@getFileDetails dir=testDir file=f/]</div></td>
+      <td title="right click, copy link location, paste into Firefox's navigation bar, hit enter!!!"><div align="left"><a href="chrome://selenium-ide/content/selenium/TestRunner.html?auto=true&baseURL=${baseURL}&test=${testURL}">copy ${f.getName()}'s url into Firefox</a></div></td>
+      <td><input type="CHECKBOX" name="${Parameters.DELETE}${f.getName()?default("xxxxxxx")}"></input></td>
+    </tr>
+    [/#list]
+  </table>
+  <BR/>
+  <input type="submit" name="submit" value="submit"/>
+  [/#if] 
+</p>
+<BR/>
+<BR/>
+<H2>Suite Builder</H2>
+<BR/>
+Make Web Test Suite: <INPUT NAME="webSuiteName" TYPE="text" size="20"/> <BR/>
+[@testOption tests=webTests form="webTests" opt="webOpt"/]
+
+<BR/>
+Make App Test Suite: <INPUT NAME="appSuiteName" TYPE="text" size="20"/><BR/>
+[@testOption tests=appTests form="appTests" opt="appOpt"/]
+<BR/>
+<input type="submit" name="submit" value="submit"/>
+</FORM>
+</body>
+</html> 
+
+[#macro getFileDetails dir file]
+  [#if file.canRead()  ] [#assign read  = "<i>readable</i>"] [/#if]
+  [#if file.canWrite() ] [#assign write = "<i>writeable</i>"] [/#if]
+  [#assign s = file.lastModified()]
+  <a title="size: ${file.length()} bytes - updated: ${utils.getDate(s)?string("HH:mm MM-dd-yyyy ")}"href="${dir.getName()}/${file.getName()}">${file.getName()}</a>
+  <br/>
+[/#macro]
+
+
+[#macro testOption tests form="appTests" opt="appOpt"]
+<p>
+<TABLE BORDER="0" >
+  <TR>
+    <TD>
+      <SELECT NAME="${form}Left" MULTIPLE SIZE="8" onDblClick="${opt}.transferRight()">
+        [#list tests as t]
+          <OPTION VALUE="${t.getName()}">${t.getName()}</option>
+        [/#list]
+      </SELECT>
+    </TD>
+    <TD VALIGN=MIDDLE ALIGN=CENTER>
+        <INPUT TYPE="button" id="right"    NAME="right" VALUE="&gt;&gt;"     ONCLICK="${opt}.transferRight()"><BR><BR>
+        <INPUT TYPE="button" id="allright" NAME="right" VALUE="All &gt;&gt;" ONCLICK="${opt}.transferAllRight()"><BR><BR>
+        <INPUT TYPE="button" id="left"     NAME="left"  VALUE="&lt;&lt;"     ONCLICK="${opt}.transferLeft()"><BR><BR>
+        <INPUT TYPE="button" id="allleft"  NAME="left"  VALUE="All &lt;&lt;" ONCLICK="${opt}.transferAllLeft()">
+    </TD>
+    <TD>
+    <SELECT NAME="${form}" SIZE="8" multiple onDblClick="${opt}.transferLeft()">
+    </SELECT>
+    </TD>
+  </TR>
+</TABLE>
+</p>
+[/#macro]

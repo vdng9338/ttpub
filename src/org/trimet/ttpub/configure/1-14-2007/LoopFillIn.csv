@@ -1,0 +1,12 @@
+Agency,Route,Direction,Service Key,Language,Table Position,Stop IDs,Running Time (in minutes)
+,53,Inbound,Weekday,,LEFT,9977,20
+,53,Outbound,Weekday,,RIGHT,9977,20
+,108,Inbound,*,,LEFT,5028,45
+,108,Outbound,*,,RIGHT,612,35
+,73,Inbound,*,,LEFT,10300,25
+,73,Outbound,*,,RIGHT,11151,25
+,115,Inbound,*,,LEFT,8989,60
+,115xd,Outbound,*,,RIGHT,5824,60
+,119,Inbound,*,,LEFT,6409,65
+,119,Outbound,*,,RIGHT,6411,65
+,51,Outbound,*,,RIGHT,6068,45

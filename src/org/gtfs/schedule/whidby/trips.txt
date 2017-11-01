@@ -1,0 +1,15 @@
+route_id,service_id,trip_id,trip_headsign,block_id
+a,d,1,To SeaTac,0
+a,d,2,To Whidbey Island,1
+a,d,3,To SeaTac,0
+a,d,4,To Whidbey Island,1
+a,d,5,To SeaTac,0
+a,d,6,To Whidbey Island,1
+a,d,7,To SeaTac,0
+a,d,8,To Whidbey Island,1
+a,d,9,To SeaTac,0
+a,d,10,To Whidbey Island,1
+a,d,11,To SeaTac,0
+a,d,12,To Whidbey Island,1
+a,d,13,To SeaTac,0
+a,d,14,To Whidbey Island,1

@@ -1,0 +1,24 @@
+Agency,Route,Direction,Service Key,Language,Route Name,Service Key Name,Destination,Show Stop ID
+Northwestern Trailways,1,North,*,en,Trailways - Boise & Spokane,,to Spokane,FALSE
+Northwestern Trailways,1,South,*,en,Trailways - Boise & Spokane,,to Boise,TRUE
+Whidbey Seatac Shuttle,a,South,*,en,Whidbey Seatac Shuttle,Drop Off Trip,to Seatac Airport,FALSE
+Whidbey Seatac Shuttle,a,North,*,en,Whidbey Seatac Shuttle,Pick Up Run,to Whidbey,TRUE
+Whidbey Seatac Shuttle,a,South,*,fr,Le Seatac Shuttle à Whidby,,à l'aéroport de Seatac,FALSE
+Whidbey Seatac Shuttle,a,North,*,fr,Le Seatac Shuttle à Whidby,,à l'île Whidby,TRUE
+Amtrak Cascades,4,North,*,en,Amtrak Cascades,Northbound,to Seattle and Vancouver BC,TRUE
+Amtrak Cascades,4,South,*,en,Amtrak Cascades,Southbound,to Portland and Eugene,TRUE
+Amtrak Cascades,3,East,*,en,Amtrak Empire Builder,,to Spokane and Chicago,TRUE
+Amtrak Cascades,3,West,*,en,Amtrak Empire Builder,,to Seattle and Portland,TRUE
+Amtrak Cascades,2,North,*,en,Amtrak Valley Retriever,Northbound,to Portland,TRUE
+Amtrak Cascades,2,South,*,en,Amtrak Valley Retriever,Southbound,"to Albany, OR",TRUE
+Amtrak Cascades,1,North,*,en,Amtrak Coast Starlight,,to Seattle,TRUE
+Amtrak Cascades,1,South,*,en,Amtrak Coast Starlight,,to Los Angeles,TRUE
+Amtrak Cascades,111,North,*,en,Amtrak I-5 Trips,Northbound,to Seattle and Vancouver BC,TRUE
+Amtrak Cascades,111,South,*,en,Amtrak I-5 Trips,Southbound,to Portland and Eugene,TRUE
+Island Transit,6,North,*,,Island Transit - Harbor Station Loop,Morning Loop,to Harbor Station,TRUE
+Island Transit,6,South,*,,Island Transit - Harbor Station Loop,Evening Loop,to Harbor Station,TRUE
+Island Transit,411w,Inbound,*,,Island Transit - Oak Harbor / Mount Vernon,,to Oak Harbor,TRUE
+Island Transit,411w,Outbound,*,,Island Transit - Oak Harbor / Mount Vernon,,to Mount Vernon,FALSE
+Whidbey Seatac Shuttle,a,South,*,,Whidbey Seatac Shuttle,,To Seatac Airport,TRUE
+Whidbey Seatac Shuttle,a,North,*,,Whidbey Seatac Shuttle,,To Whidbey Island,TRUE
+Demo Transit Authority,CITY,*,*,,Deadwood City Route,,,TRUE

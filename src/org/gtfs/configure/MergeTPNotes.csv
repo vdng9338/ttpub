@@ -1,0 +1,6 @@
+"Agency","Route","Direction","Service Key","Language","Rule: MERGE, FORCE","Source Timepoint","Printed Timepoint","FN Symbol","Footnote (FN)","FN Sequence"
+"Island Transit","1","North","*","en","FORCE","RT6ST29B","RT6ST28B","A","Departs from SOURCE.NAME (Stop ID SOURCE.ID).","10"
+"Island Transit","1","North","*","en","MERGE","RT6ST34B","RT6ST32B","B","Departs from SOURCE.NAME (Stop ID SOURCE.ID).","15"
+"Island Transit","1","South","*","en","FORCE","RT6ST26B","RT6ST11A","A","Also arrives at SOURCE.NAME (Stop ID SOURCE.ID).","10"
+"Island Transit","3","South","*","en","MERGE","RT6ST26B","RT6ST15A","A","Departs from SOURCE.NAME (Stop ID SOURCE.ID).","10"
+"Amtrak Cascades","1","North","*","","FORCE","PDX","PDX",,,"0"

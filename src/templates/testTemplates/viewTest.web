@@ -1,0 +1,42 @@
+[#ftl]
+[#import  "../include/functions.ftl" as funct]
+[#import  "../include/macros.ftl"    as macros]
+[#include "testMacros.ftl"]
+[#assign testName = routeNum + "-" + dirID + "-" + keyID]
+<html>
+<head>
+  <meta http-equiv="Expires"       content="Tue, 01 Jan 1980 1:00:00 GMT" >
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Content-Type"  content="text/html; charset=UTF-8">
+  <meta content="created: ${Parameters.NOW?datetime}">
+  <meta content="effective: ${date}">  
+  <title>TriMet Website Test: ${testName}</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr>
+  <td rowspan="1" colspan="3">Test: ${testName}</td>
+</tr>
+</thead>
+<tbody>
+[@openTPPubPage 
+         route="${timesTable.getRouteName()}" 
+         key="${timesTable.getKeyName()}" 
+         dir="${timesTable.getDirName()}" 
+         date="${timesTable.getDate()}" 
+         method="${timesTable.getTableType()}"
+         page="View" 
+         submit="submit"
+/]
+[@verifyText text="${name}" target="//h1"/]
+[@verifyText text="${key}*${dest}" target="//h5"/]
+[@testForStopNamesAndIDs columns=columns showStopIDs=showStopIDs/]
+[@testTableExists columns=columns rows=rows/]
+[@testTableTimes   rows=rows/]
+[@testTableWithFNs rows=rows/]
+[@testFootnoteContent footnotes=timesTable.getFootnotes()/]
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Route,Direction,Service Key,Language,Rule,Route,Direction,Min. Number Stops,Stop (optional),Symbol,Footnote,Sequence
+100,Inbound,"Weekday, Saturday, Sunday",en,APPEND_TRIP,190,Inbound,3,,y, , 
+100,Inbound,"Weekday, Saturday, Sunday",en,APPEND_TRIP,90,Inbound,3,9848,R,Train starts as Red Line train from Portland International Airport ,35
+100,Outbound,"Weekday, Saturday, Sunday",en,APPEND_TRIP,190,Outbound,3,,Y,Yellow Line train bound for Expo Center that <B>does not</B> travel east beyond the Rose Quarter.,25

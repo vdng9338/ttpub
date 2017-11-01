@@ -1,0 +1,141 @@
+<html>
+
+<head>
+<title>TimeTable Publisher</title>
+<style><!--
+.Section1
+	{page:Section1;}
+.bigText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+}
+.normalText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+}
+.table {
+	letter-spacing: normal;
+	word-spacing: 3pt;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	background-position: center center;
+	vertical-align: middle;
+	text-align: left;
+	text-indent: 0pt;
+	white-space: normal;
+	border: thin solid #CCCCCC;
+}
+.hugeText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: bolder;
+	cursor: s-resize;
+	font-variant: small-caps;
+	background-color: #FFFFFF;
+}
+
+a:link {
+	color: #47a;
+}
+
+a:visited {
+	color: #666;
+}
+
+a:active,a:hover {
+	color: #900;
+}
+
+	
+-->
+</style>
+<style type="text/css">
+<!--
+.smallText {
+	font: 12px Arial, Helvetica, sans-serif;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" link=blue vlink=purple class="Normal" lang=EN-US>
+<div class=Section1>
+  <p class="normalText">TimeTable Publisher </p>
+  <h2 class="bigText">Tools</h2>
+  
+<table width="100%" border="1" align="left" cellpadding=1 cellspacing=4 bordercolor="#CCCCCC" class="table">
+    
+  <tr>      
+    <td width="230" rowspan="3">
+        <h1 class="hugeText"><a href="timetable.config?method=GTFS&route=Amtrak+Cascades---4&dir=South&key=Weekday">Configure</a></h1>
+        <h4 class="normalText"><a href="editor/csvsingle.edit?method=GTFS">Footnote Config</a></h4>
+    </td>
+    <td width="101" rowspan="3" align="center" class="Normal"><img border="0"  src="img/sched.png"></td>
+    <td colspan="2" class="normalText">Tool to help build the schedule.</td>
+  </tr>
+  <tr>
+    <td align="left" class="smallText">How To</td>
+    <td class="smallText"><a href="howTo/addTimePoint.avi">Add Time Points to Table</a></td>
+  </tr>
+  <tr>
+    <td align="left" class="smallText"></td>
+    <td class="smallText"><a href="howTo/dropTimePoint.avi">Drop Time Points from Table</a></td>
+  </tr>
+     
+    
+  <tr>      
+    <td rowspan="3">
+      <h1 class="hugeText"><a href="timetable.web?method=GTFS&route=Amtrak+Cascades---4&dir=South&key=Weekday">View</a></h1>
+      <h4 class="normalText"><a href="pdf/timetable.web?method=GTFS&route=Amtrak+Cascades---4&dir=South&key=Weekday">View as PDF</a></h4>
+    </td>
+    <td rowspan="3" align="center" class="Normal"><img border="0"  src="img/table.png"></td>
+    <td colspan="2" class="normalText"><p>View a schedule. Note: there is a link from the Configure tool to view the schedule being editied.</p></td>
+  </tr>
+    
+  <tr>  
+    <td height="23" colspan="2" class="smallText">
+     <a href="timetable.web?method=GTFS&route=Amtrak Cascades---4&dir=North">View Amtrack Schedule</a> 
+     (<a href="timetable.web?method=GTFS&route=Amtrak Cascades---1&dir=North">North</a>, 
+     <a href="timetable.web?method=GTFS&route=Amtrak Cascades---2&dir=South">South</a>, 
+     <a href="timetable.web?method=GTFS&route=Amtrak Cascades---3&dir=East">East</a>, 
+     <a href="timetable.web?method=GTFS&route=Amtrak Cascades---3&dir=West">West</a>)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="smallText"><a href="timetable.web?method=MOCK&route=-20">View <i>Mock</i> Schedule Data</a></td>
+  </tr>
+    
+  <tr>      
+    <td height="55"><h1 class="hugeText"><a href="timetable.compare?method=GTFS">Compare</a></h1></td>
+    <td align="center" class="Normal"><img border="0"  src="img/compare.png"></td>
+    <td colspan="2" class="normalText">Compare Route(s) against two Service Dates</td>
+  </tr>
+    
+  <tr>      
+    <td><h1 class="hugeText"><a href="timetable.print?method=GTFS">Print</a></h1></td>
+    <td align="center" class="Normal"><img border="0"  src="img/indesign.gif"></td>
+    <td height="65" colspan="2" class="normalText">Create ZIP / PDF files of Timetables</td>
+  </tr>
+
+  <tr>      
+    <td rowspan="3">
+      <h1 class="hugeText"><a href="testRunner.suite?method=GTFS">Test</a></h1>
+    </td>
+    <td rowspan="3" align="center" class="Normal"><img border="0"  src="img/test.png"></td>
+    <td colspan="2" class="normalText"><p>Run and Manage Timetable Acceptance Tests.</p></td>
+  </tr>
+</table>
+ 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

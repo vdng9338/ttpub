@@ -1,0 +1,2 @@
+route_id,route_short_name,route_long_name,route_desc,route_type
+a,,Whidbey Island to Seatac Airport,"Whidbey Island to SeaTac Airport via Oak Harbor, Coupeville, Greenbank, Freeland, Bayview, Langley and Clinton",,3

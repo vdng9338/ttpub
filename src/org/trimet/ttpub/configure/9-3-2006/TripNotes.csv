@@ -1,0 +1,20 @@
+Route,Direction,Service Key,Language,Trip Type,Key Type,Ex Key Type (eg: exclude trips with both F and f keys),Symbol,Footnote,Sequence
+14,Outbound,Weekday,en,E,,,E,Express trip. No stops between Fareless Square and Hawthorne & 39th.,20
+15,Outbound,Weekday,en,E,,,E,Express trip. No stops between Fareless Square and Belmont & 39th Avenue.,20
+31,Outbound,Weekday,en,E,,,E,Express trip. No stops between Fareless Square and Webster & Lake Rd except at ML King Jr Blvd & Market.,20
+31,Outbound,Weekday,en,L,,,L,"Limited trip. No stops between Fareless Square and Clackamas TC except at the following locations: SE McLoughlin at 17th & Tacoma, Harrison & 32nd, 42nd & Llewellyn, King & Linwood and 82nd & King.",20
+31,Inbound,Weekday,en,E,,,E,Express trip. No stops between Webster & Lake Rd and Fareless Square except at Grand & Mill.,20
+31,Inbound,Weekday,en,L,,,L,"Limited trip. No stops between Clackamas TC and Fareless Square except at the following locations: SE King at 82nd & Linwood, 42nd & Llewellyn, Harrison & 31st and along McLoughlin at #8300 & 17th.",20
+45,Outbound,Weekday,en,E,,,E,"Express trip. No stops between SW 5th & Broadway and Hillsdale, Capitol Hwy & Sunset.",20
+45,Inbound,Weekday,en,E,,,E,"Express trip. No stops between Hillsdale, Capitol Hwy & Sunset and SW 5th & Broadway.",20
+104,Outbound,Weekday,en,L,,,L,"Limited trip. No stops between Fareless Square and 122nd & Division except at the following locations: SE Hawthorne & 6th, SE 7th & Harrison, SE Division at 12th, 26th, 39th, 50th, 52nd, 60th, 71st, 82nd, 92nd, 101st, 112th, 119th & 121st.",20
+104,Inbound,Weekday,en,L,,,L,"Limited trip. No stops between 122nd & Division and Fareless Square except at the following locations: SE Division & 122nd, 112th, 101st, 92nd, 82nd, 71st, 60th, 52nd, 50th, 39th, 26th & 12th, SE 7th & Harrison and SE Madison and Grand.",20
+109,Outbound,Weekday,en,L,,,L,"Limited trip. No stops between SW 1st Avenue & Arthur and 98th & Powell except at the following locations: SE Powell at Milwaukie, 26th, 39th, 52nd, 62nd, 69th, 82nd, and 92nd.",20
+109,Outbound,"Weekday, Saturday, Sunday",en,V,,,V,This trip serves The Village at 180th & Powell.,20
+193,"Outbound,Inbound",Weekday,en,,N,n,F,Fridays only,20
+193,"Outbound,Inbound",Weekday,en,,n,N,W,Monday-Thursdays only,15
+39,"Outbound,Inbound",Weekday,en,,F,f,F,Fridays only,20
+"100,90,190,10090","Outbound,Inbound",Weekday,en,,F,f,F,Fridays only,20
+"100,90,190,10090","Outbound,Inbound",Weekday,en,,f,F,W,Monday-Thursdays only,15
+90,Inbound,Weekday,en,G,,,F,"On Fridays, continues to Hillsboro",20
+90,Inbound,"Weekday, Saturday, Sunday",en,H,,,X,Continues to Hillsboro,20

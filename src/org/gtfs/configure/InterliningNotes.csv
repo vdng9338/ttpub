@@ -1,0 +1,3 @@
+Agency,Route,Direction,Service Key,Language,Rule,Route,Direction,Min. Number Stops,Stop (optional),Time Buffer Between Routes (in minutes),Symbol,Footnote,Sequence
+*,1,Inbound,"Weekday, Saturday, Sunday",en,ORIGINATES,1,Inbound,,,10,*,Trips originate in Canada,35
+*,1,Outbound,"Weekday, Saturday, Sunday",en,CONTINUES,1,Outbound,,,10,*,Trips originate in Canada,35

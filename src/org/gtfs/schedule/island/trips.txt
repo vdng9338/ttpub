@@ -1,0 +1,70 @@
+route_id,service_id,trip_id,trip_headsign,block_id
+6,w,6_1,Northbound,1
+6,w,6_3,Northbound,1
+6,w,6_5,Northbound,1
+6,w,6_7,Northbound,1
+6,w,6_9,Northbound,1
+6,w,6_11,Northbound,1
+6,w,6_13,Northbound,1
+6,w,6_15,Northbound,1
+6,w,6_17,Northbound,1
+6,w,6_19,Northbound,1
+6,w,6_21,Northbound,1
+6,w,6_23,Northbound,1
+6,w,6_1k,Keystone Ferry,1
+6,w,6_3k,Keystone Ferry,1
+6,w,6_5k,Keystone Ferry,1
+6,w,6_7k,Keystone Ferry,1
+6,w,6_9k,Keystone Ferry,1
+6,w,6_11k,Keystone Ferry,1
+6,w,6_13k,Keystone Ferry,1
+6,w,6_15k,Keystone Ferry,1
+6,w,6_17k,Keystone Ferry,0
+6,w,6_19k,Keystone Ferry,0
+6,w,6_21k,Keystone Ferry,0
+6,w,6_23k,Keystone Ferry,0
+6,w,6_25k,Keystone Ferry,0
+6,w,6_27k,Keystone Ferry,0
+6,w,6_29k,Keystone Ferry,0
+6,w,6_31k,Keystone Ferry,0
+6,w,6_2,Southbound,0
+6,w,6_4,Southbound,0
+6,w,6_6,Southbound,0
+6,w,6_8,Southbound,0
+6,w,6_10,Southbound,0
+6,w,6_12,Southbound,0
+6,w,6_14,Southbound,0
+6,w,6_16,Southbound,0
+6,w,6_18,Southbound,0
+6,w,6_20,Southbound,0
+6,w,6_22,Southbound,0
+6,w,6_24,Southbound,0
+6,w,6_26,Southbound,0
+411w,w,411w_1s,Harbor Station,0
+411w,w,411w_3s,Harbor Station,0
+411w,w,411w_5s,Harbor Station,0
+411w,w,411w_7s,Harbor Station,0
+411w,w,411w_9s,Harbor Station,0
+411w,w,411w_11s,Harbor Station,0
+411w,w,411w_13s,Harbor Station,0
+411w,w,411w_15s,Harbor Station,0
+411w,w,411w_17s,Harbor Station,0
+411w,w,411w_2n,Skagit Station,1
+411w,w,411w_4n,Skagit Station,1
+411w,w,411w_6n,Skagit Station,1
+411w,w,411w_8n,Skagit Station,1
+411w,w,411w_10n,Skagit Station,1
+411w,w,411w_12n,Skagit Station,1
+411w,w,411w_14n,Skagit Station,1
+411w,w,411w_16n,Skagit Station,1
+411w,w,411w_18n,Skagit Station,1
+411w,sat,411w_20s,Skagit Station,0
+411w,sat,411w_21s,Harbor Station,1
+411w,sat,411w_22s,Skagit Station,0
+411w,sat,411w_23s,Harbor Station,1
+411w,sat,411w_24s,Skagit Station,0
+411w,sat,411w_25s,Harbor Station,1
+411w,sat,411w_26s,Skagit Station,0
+411w,sat,411w_27s,Harbor Station,1
+411w,sat,411w_28s,Skagit Station,0
+411w,sat,411w_29s,Harbor Station,1

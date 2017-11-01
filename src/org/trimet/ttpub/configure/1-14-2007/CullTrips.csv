@@ -1,0 +1,4 @@
+"Agency","Route","Direction","Service Key","Language","Rule: BEGIN_TRIP, END_TRIP, VERTICULL","Start","Finish"
+"","53","Inbound","Weekday","","BEGIN_TRIP","12","30"
+"","53","Outbound","Weekday","","BEGIN_TRIP","0","12"
+"TriMet","18","*","*","","VERTICULL","0","0"

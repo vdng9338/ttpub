@@ -1,0 +1,11 @@
+route_id,service_id,trip_id,trip_headsign,block_id
+3,d,nwt1,SEATTLE - TACOMA WA,1
+3,d,nwt2,SEATTLE,1
+3,d,nwt3,WENATCHEE,0
+3,d,nwt4,SPOKANE WA,0
+1,d,nwt5,BOISE ID,0
+1,d,nwt6,BOISE ID,0
+1,d,nwt7,SPOKANE WA,1
+1,d,nwt8,SPOKANE WA,1
+2,d,nwt9,WENATCHEE - ELLENSBURG WA,1
+2,d,nwt10,WENATCHEE - OMAK WA,0

@@ -1,0 +1,122 @@
+[#ftl strip_whitespace="true" attributes={"content_type" : "text/xml"}]
+[#setting number_format="0.##########"/]
+[#import "include/functions.ftl" as funct]
+<?xml version ="1.0" encoding="UTF-8" standalone="yes"?>
+
+<${rootElement?default("time-table")}>
+[#if timesTable?exists ]
+  [#assign addFooter="true"]
+  [@printTable
+        route=timesTable.getRouteName()
+        dir=timesTable.getDirName()
+        dest=timesTable.getDestination()
+        date=timesTable.getDate()
+        stopid="xxx"
+        rows=timesTable.getTimeTable()
+        footnotes=timesTable.getFootnotes()
+  /]
+[/#if]
+</${rootElement?default("time-table")}>
+
+[#-- 
+    Below are freemarker Macros and Functions:  
+    Freemarker Macros output (print) everything within the #macro directive 
+    (when called from above), whereas Freemarker Functions don't print anything
+    ...but they do *need* to return a value back to the caller (which can then
+    be output by the caller).
+  --]
+
+[#--
+    PRINT TABLE
+    
+  --]
+[#macro printTable route dir dest date stopid rows footnotes]
+  [#assign numRows=rows?size]
+  <route>${route?xml}</route>
+  <direction>${dir?xml}</direction>  
+  <destination>${dest?xml}</destination>
+  <effective-date>${date?xml}</effective-date>
+  <stop-id>${stopid?default("no stop id")}</stop-id>
+
+  [#if now?exists ]
+  <this-file-create-date>${now?datetime?xml}</this-file-create-date>
+  [/#if]
+
+  <times>
+    [#if numRows == 0]
+        [@printTemplateTable /]
+    [#else]
+        [@printTimeTable rows=rows /]
+    [/#if]
+  </times>
+
+  <footnotes>
+  [#if footnotes?exists]
+    <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0" aid:table="table" aid:trows="${footnotes?size}" aid:tcols="2">
+    [#list footnotes as fn]
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1"><symbol>${fn.getSymbol()}</symbol></Cell>
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1"><note>${fn.getFormattedNote()}</note></Cell>
+    [/#list]
+    </Table>
+  [/#if]
+  </footnotes>
+[/#macro]
+
+[#macro printTimeTable rows]
+  [#assign numRows=rows?size + 1]
+  [#if addFooter?exists]
+    [#assign numRows=numRows + 1]
+  [/#if]
+    <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0" aid:table="table" aid:trows="${numRows}" aid:tcols="3">
+    [@printHeader headFoot="theader" /]
+
+    [#-- PRINT THE TABLE CONTENTS - SCHEDULE TIMES --]
+    [#assign rowNum = 1]
+    [#list rows as rw]
+      [#list 0..2 as i]
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1">${funct.getXmlTime(rw, i)}</Cell>
+      [/#list]
+      [#assign rowNum = 1 + rowNum]
+    [/#list]
+
+    [#-- OPTIONALLY, PRINT THE TABLE FOOTER --]
+    [#if addFooter?exists]
+      [@printHeader headFoot="tfooter" /]
+    [/#if]
+    </Table>
+[/#macro]
+
+[#macro printTemplateTable ]
+  [#assign numRows=2]
+  [#if addFooter?exists]
+    [#assign numRows=3]
+  [/#if]
+
+    <Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0" aid:table="table" aid:trows="${numRows}" aid:tcols="3">
+    [@printHeader headFoot="theader" /]
+
+    [#-- 
+         print one row of dummy data for our template -- InDesign needs at least one row to make a table
+         i print all the elements, so that they are available in InDesign for STYLE MAPPING 
+      --]
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1"><am/><pm/><yel-am/><red-am/><red-pm/><yel-pm/></Cell>
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1"><am/><pm/><yel-am/><red-am/><red-pm/><yel-pm/></Cell>
+      <Cell aid:table="cell" aid:crows="1" aid:ccols="1"><am/><pm/><yel-am/><red-am/><red-pm/><yel-pm/></Cell>      
+
+    [#-- optionally, print the table footer --]
+    [#if addFooter?exists]
+       [@printHeader headFoot="tfooter" /]
+    [/#if]
+    </Table>
+[/#macro]
+
+[#-- NOTE: careful changing the format of the Cell below...adding code-readable WHITESPACE SCREWS UP InDesign --]
+[#macro printHeader headFoot]
+      <Cell aid:table="cell" aid:${headFoot}="" aid:crows="1" aid:ccols="1"><table-header>Weekdays</table-header></Cell>
+      <Cell aid:table="cell" aid:${headFoot}="" aid:crows="1" aid:ccols="1"><table-header>Saturday</table-header></Cell>
+      <Cell aid:table="cell" aid:${headFoot}="" aid:crows="1" aid:ccols="1"><table-header>Sunday</table-header></Cell>  
+[/#macro]
+
+
+
+

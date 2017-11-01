@@ -1,0 +1,222 @@
+[#ftl]
+[#import "include/functions.ftl" as funct]
+[#import "include/macros.ftl" as macros]
+[@macros.head title="C O M P A R E" terminate=false/]
+  <SCRIPT LANGUAGE="JavaScript" SRC="js/OptionTransfer.js"></SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript" SRC="js/FormValidation.js"></SCRIPT>
+  <SCRIPT LANGUAGE="JavaScript">
+    var opt = new OptionTransfer("routeList", "${Parameters.RT_SELECT_FORM}");
+    opt.setAutoSort(false);
+    opt.setDelimiter(",");
+    opt.setStaticOptionRegex("^(SASI|BCID|SHELTERS|ALL).*");
+  </SCRIPT>
+
+  <script language="JavaScript" type="text/JavaScript">
+  //<![CDATA[
+  function _el(i) {return document.getElementById(i);}
+  var _divs = [ 
+    [#assign varNum = 1]
+    [#if ttDiffList?has_content]
+      [#list ttDiffList as rt] 'sched${varNum}', 'times${varNum}', [#assign varNum = 1 + varNum] [/#list]
+    [/#if]    
+    'bogusValue'
+  ];
+
+  function showDiv(name) 
+  {
+      for (var i = 0; i < _divs.length; i++) 
+      {
+          var n = _divs[i];
+          var t = _el(n);
+          var f = _el(n + '_div');
+          if (t) 
+          {
+              t.className = (n == name) ? 'selected' : null;
+          }
+          if (f) 
+          {
+              f.style.display = (n == name) ? '' : 'none';
+          }
+      }
+      return false;
+  }
+  //]]>
+  </script>
+</head>
+        
+<body class="composite" onLoad="opt.init(document.forms[0])">
+<FORM action="timetable.compare" method="get" onSubmit="selectAllOptions( ${Parameters.RT_SELECT_FORM} )">
+  [@macros.navBar selectedPage="timetable.compare" selectedData="${timesTable.getTableType()}" /]
+  [#if RequestParameters?exists && RequestParameters.method?exists ]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]
+<p>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.PDF}">${Parameters.PDF}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.BYPASS}">${Parameters.BYPASS}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.UPDATE}" checked>${Parameters.UPDATE}</input>
+   <input type="submit" name="submit"></input>
+</p>
+<br/>
+[#include "include/dateform.ftl"]
+[#include "include/diffDateForm.ftl"]
+<p title="Stop Time comparison will 'succeed' if two times are within the specified time buffer (minutes) of each other.">
+  Time Buffer (in minutes): <INPUT TYPE="text" NAME="${Parameters.TIME_BUFFER}" VALUE="${timeBuffer?default("3")}" SIZE="2"/>
+</p>
+<p>
+<TABLE BORDER="0" >
+  <TR>
+    <TD>
+      <SELECT NAME="routeList" MULTIPLE SIZE="8" onDblClick="opt.transferRight()">
+        [#list routeList as rt]
+          [@macros.routeOption rtParam=rt selectValue=route /]
+        [/#list]
+      </SELECT>
+    </TD>
+    <TD VALIGN=MIDDLE ALIGN=CENTER>
+        <INPUT TYPE="button" id="right"    NAME="right" VALUE="&gt;&gt;" ONCLICK="opt.transferRight()"><BR><BR>
+        <INPUT TYPE="button" id="allright" NAME="right" VALUE="All &gt;&gt;" ONCLICK="opt.transferAllRight()"><BR><BR>
+        <INPUT TYPE="button" id="left"     NAME="left"  VALUE="&lt;&lt;"     ONCLICK="opt.transferLeft()"><BR><BR>
+        <INPUT TYPE="button" id="allleft"  NAME="left"  VALUE="All &lt;&lt;" ONCLICK="opt.transferAllLeft()">
+    </TD>
+    <TD>
+    <SELECT NAME="${Parameters.RT_SELECT_FORM}" SIZE="8" multiple onDblClick="opt.transferLeft()">
+    </SELECT>
+    </TD>
+  </TR>
+</TABLE>
+</p>
+</FORM>
+
+[#if ttDiffList?has_content]
+<table class="report">
+<thead>
+  <tr>
+      <th><h1>Route</h1></th>
+      <th><h1>Timepoint Diff</h1></th>
+      <th><h1>Stop Time Diff</h1></th>
+  </tr>
+</thead>
+<tbody>
+  [#assign rowNum = 1]
+  [#list ttDiffList as rt]
+    ${funct.getTr(rowNum, "odd", "even")}
+       <td>${rt.getScheduleA().getRouteDescription()}</td>
+       <td>
+          <a href="javascript:void(0)" class="selected" id="busstops" onclick="return showDiv('sched${rowNum}')">
+            [#if rt.areTimePointsEqual() == true]
+               no change in timepoints
+            [#else]
+              <b>DIFFERENT</b> scheduling timepoints
+            [/#if]
+          </a>
+       </td>
+       <td>
+          <a href="javascript:void(0)" class="selected" id="busstops" onclick="return showDiv('times${rowNum}')">
+            [#if rt.areStopTimesEqual() == true]
+               no change of stop times
+            [#else]
+              <b>DIFFERENT</b> stop times
+            [/#if]
+          </a>
+       </td>
+    </tr>
+    [#assign rowNum = 1 + rowNum]
+  [/#list]
+</tbody>
+</table>
+
+[#assign divNum = 1]
+[#list ttDiffList as rt]
+  <div id="sched${divNum}_div" style="display:none">    
+    <table class="its">
+    <tbody>
+      <tr>
+        <td colspan="4">${rt.getScheduleA().getRouteDescription()} - Designated Timepoints on <b>${rt.getScheduleA().getDate()}</b>:</td>
+      </tr>
+      <tr class="odd">
+        [#list rt.getScheduleA().getSchedulingTimePoints() as cl]
+          <td>${cl.getDescription()}</td>
+        [/#list]
+      </tr>
+      <tr class="odd">
+        [#list rt.getScheduleA().getSchedulingTimePoints() as cl]
+          <td>${cl.getStopId()}</td>
+        [/#list]
+      </tr>
+      <tr><td><br/></td></tr>
+      <tr><td><br/></td></tr>
+      <tr>
+        <td colspan="4">${rt.getScheduleB().getRouteDescription()} - Designated Timepoints on <b>${rt.getScheduleB().getDate()}</b>:</td>
+      </tr>
+      <tr class="odd">
+        [#list rt.getScheduleB().getSchedulingTimePoints() as cl]
+          <td>${cl.getDescription()}</td>
+        [/#list]
+      </tr>
+      <tr class="odd">
+        [#list rt.getScheduleB().getSchedulingTimePoints() as cl]
+          <td>${cl.getStopId()}</td>
+        [/#list]
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+
+  <div id="times${divNum}_div" style="display:none">
+    <table class="report">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th colspan="4">${rt.getScheduleA().getRouteDescription()} - Route Stop Times</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        [#list rt.getScheduleB().getTimePoints() as cl]
+          <th>${cl.getDescription()}</th>
+        [/#list]
+      </tr>
+      <tr>
+        <th>DATE:</th>
+        <th>TRIP:</th>
+        [#list rt.getScheduleB().getTimePoints() as cl]
+          <th>${cl.getStopId()}</th>
+        [/#list]
+      </tr>
+    </thead>
+    <tbody>
+      [#assign index = 0]
+      [#assign class = "odd"]
+      [#list rt.getDiffTable() as row]
+        [#assign index = index + 1]
+        [#if index == 3]
+          [#assign class = "even"]
+        [/#if]
+        [#if index == 5]
+          [#assign class = "odd"]
+          [#assign index = 1]
+        [/#if]
+    <tr class="${class}">
+        <td>${row.getDate()}</td>
+        <td>${row.getTrip()}</td>
+        [#list 0..row.getLen() as i]
+        [#if row.isHighlighted(i)]
+          <td><font color="red"><i>${funct.getHtmlTime(row, i)}</i></font></td>
+        [#else]
+          <td>${funct.getHtmlTime(row, i)}</td>
+        [/#if]
+        [/#list]          
+    </tr>
+      [/#list]
+      <tr><td><br/></td></tr>
+      <tr><td><br/></td></tr>
+    </tbody>
+    </table>
+  </div>
+  [#assign divNum = 1 + divNum]
+[/#list]
+[/#if]
+</body>
+</html>

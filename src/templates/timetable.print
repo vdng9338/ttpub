@@ -1,0 +1,124 @@
+[#ftl]
+[#import "include/functions.ftl" as funct]
+[#import "include/macros.ftl"    as macros]
+[@macros.head title="P R I N T" terminate=false/]
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    function toggleCheckBoxes(sw)
+    {
+        sw.togSw = !sw.togSw;
+
+        var form = document.getElementById('submitForm');
+        var target = sw.name;
+        for(var j=0; j < form.elements.length; j++)
+        {
+            el = form.elements[j];
+            if(el.name.indexOf(target) >= 0) 
+            {
+                el.checked=sw.togSw;
+            }
+        }
+    }
+  -->
+  </SCRIPT>
+
+  <!-- http://www.w3.org/TR/WD-html40-970708/struct/global.html#edef-META -->
+  <meta http-equiv="Exp2" content="${Parameters.NEXT_WEEK?string('EEE, dd MMM yyyy hh:mm:ss')} GMT">
+  <meta http-equiv="Exp2" content="${Parameters.NEXT_MONTH?string('EEE, dd MMM yyyy hh:mm:ss')} GMT">  
+</head>
+<body class="composite" >
+
+<FORM id="submitForm" action="timetable.print" method="POST">
+  [@macros.navBar selectedPage="timetable.print" selectedData="${timesTable.getTableType()}" /]
+  [#if RequestParameters?exists && RequestParameters.method?exists && !RequestParameters.method?matches("MOCK")]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]
+  [#if RequestParameters?exists && RequestParameters.preview?exists]
+    <input type="hidden" name="${Parameters.PREVIEW}"  value="${RequestParameters.preview}"/>
+  [/#if]
+<p>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.JUST_TESTS}">${Parameters.JUST_TESTS}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.HTMLS_ZIP}">${Parameters.HTMLS_ZIP}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.BYPASS}">${Parameters.BYPASS}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.PDF}">${Parameters.PDF}</input>
+   <input type="radio"  name="${Parameters.SUBMIT}" value="${Parameters.ZIP}" checked>${Parameters.ZIP}</input>
+   <input type="submit" value="submit"/>
+</p>
+<br/>
+[#include "include/dateform.ftl"]
+<br/>
+<p>
+  [#if zipFile?exists]
+  <br/>
+  <h4><b>Your File: </b></h4>
+    <ul><h4>[@getFileDetails dir=zipDir file=zipFile /]</h4></ul>
+  <br/>
+  [/#if]
+  [#if zipList?has_content]
+  <h4><b>Older Files: </b></h4>
+  <table>
+    <tr>
+      <th>zip</th>
+      <th>delete?</th>
+    </tr>
+    [#list zipList as f]
+    <tr>
+      <td><div align="left">[@getFileDetails dir=zipDir file=f /]</div></td>
+      <td><input type="CHECKBOX" name="${Parameters.DELETE}${f.getName()?default("xxxxxxx")}"></input></td>
+    </tr>
+    [/#list]
+  </table>
+  [/#if] 
+</p>
+<br/>
+<p>
+<br/>
+<table>
+  <thead>
+  <tr>
+     <th>Route</th>
+     <th><input type="CHECKBOX" name="${Parameters.WEEK}" onClick="return toggleCheckBoxes(this)">${Parameters.WEEK}</input></th>
+     <th><input type="CHECKBOX" name="${Parameters.SAT}"  onClick="return toggleCheckBoxes(this)">${Parameters.SAT}</input></th>
+     <th><input type="CHECKBOX" name="${Parameters.SUN}"  onClick="return toggleCheckBoxes(this)">${Parameters.SUN}</input></th>
+     <th width="10%"> </th>
+     <th><input type="CHECKBOX" name="${Parameters.INBOUND}"  onClick="return toggleCheckBoxes(this)">${Parameters.INBOUND}</input></th>
+     <th><input type="CHECKBOX" name="${Parameters.OUTBOUND}" onClick="return toggleCheckBoxes(this)">${Parameters.OUTBOUND}</input></th>
+  </tr>
+  </thead>
+  [#assign rowNum = 1]
+  [#list routeList as rt]
+    ${funct.getTr(rowNum, "odd", "even")}
+    <td><div align="left">${rt.getRouteName()}:</div></td>
+    <td><input type="CHECKBOX" name="${Parameters.WEEK}${rt.getRouteID()}"></input></td>
+    <td><input type="CHECKBOX" name="${Parameters.SAT}${rt.getRouteID()}"></input></td>
+    <td><input type="CHECKBOX" name="${Parameters.SUN}${rt.getRouteID()}"></input></td>
+    <td>       </td>                                                        
+    <td><input type="CHECKBOX" name="${Parameters.INBOUND}${rt.getRouteID()}"></input></td>
+    <td><input type="CHECKBOX" name="${Parameters.OUTBOUND}${rt.getRouteID()}"></input></td>
+    [#assign rowNum = 1 + rowNum]
+    </tr>
+ [/#list]
+</table>
+</p>
+</FORM>
+
+</body>
+</html> 
+
+[#macro getFileDetails dir file]
+  [#if file.canRead()  ] [#assign read  = "<i>readable</i>"] [/#if]
+  [#if file.canWrite() ] [#assign write = "<i>writeable</i>"] [/#if]
+  [#assign s = file.lastModified()]
+  <a title="size: ${file.length()} bytes - updated: ${utils.getDate(s)?string("HH:mm MM-dd-yyyy ")}"href="${dir.getName()}/${file.getName()}">${file.getName()}</a>
+  <br/>
+[/#macro]
+
+[#macro OLDgetFileDetails dir file]
+  [#if file.canRead()  ] [#assign read  = "<i>readable</i>"] [/#if]
+  [#if file.canWrite() ] [#assign write = "<i>writeable</i>"] [/#if]
+ 
+ [#assign s = file.lastModified()]
+  <a href="${dir.getName()}/${file.getName()}">${file.getName()}</a>
+   - size: ${file.length()} bytes - updated: ${utils.getDate(s)?string("HH:mm MM-dd-yyyy ")}
+  <br/>
+[/#macro]

@@ -1,0 +1,25 @@
+Route,Direction,Service Key,Language,Route Name,Key Name,Destination
+53,Inbound,Weekday,en,,Evening Loop,
+53,Outbound,Weekday,en,,Morning Loop,
+16,Outbound,Weekday,en,,,to St Johns or Jubitz
+16,Inbound,Weekday,en,,,to Portland City Center
+16,Outbound,Saturday,en,,,to Jubitz
+16,Inbound,Saturday,en,,,to Rivergate
+16,Outbound,Sunday,en,,,to St Johns or Jubitz
+16,Inbound,Sunday,en,,,to Portland City Center
+17,Outbound,Weekday,en,,,to Montgomery Park or Linnton
+17,Outbound,Saturday,en,,,to Montgomery Park or Linnton
+17,Outbound,Sunday,en,,,to Montgomery Park
+31,Inbound,"Saturday, Sunday",en,,,to Milwaukie TC
+31,Outbound,Sunday,en,,,to Clackamas Town Center
+32,Inbound,Saturday,en,,,to Oregon City TC
+52,Outbound,Sunday,en,,,to 185th & West Union
+101,Outbound,Saturday,en,,,to Vermont & Shattuck
+10090,Inbound,"Weekday, Saturday, Sunday",en,Combo Max Blue & Red Line, ,to Portland City Center and Beaverton Transit Center or Hillsboro
+10090,Outbound,"Weekday, Saturday, Sunday",en,Combo Max Blue & Red Line, ,to Portland City Center and Gresham or Airport
+254,Inbound,"Weekday, Saturday, Sunday",en,"54-Beaverton-Hillsdale Hwy, 56-Scholls Ferry Rd", ,to Portland City Center
+254,Outbound,"Weekday, Saturday, Sunday",en,"54-Beaverton-Hillsdale Hwy, 56-Scholls Ferry Rd", ,to Beaverton TC or Washington Square
+280,Inbound,Weekday,en,"80-Kane Rd/Troutdale Rd,  81-Kane Rd/257th Ave", ,to Gresham Transit Center
+280,Outbound,Weekday,en,"80-Kane Rd/Troutdale Rd, 81-Kane Rd/257th Ave", ,to Troutdale
+155156,Inbound,Sunday,en,"155-Sunnyside, 156-Mather Rd", ,to Clackamas Town Center
+155156,Outbound,Sunday,en,"155-Sunnyside, 156-Mather Rd", ,to 147th & Oregon Trail

@@ -1,0 +1,45 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[@macros.head title="C O N F I G U R E (csv editor route config tool) - ${timesTable.getRouteName()?default('')}" path=".."/]
+<body class="composite">
+<p id="top">
+<!-- route select / edit form - self terminated -->
+[@macros.navRouteForm page="routeconfig.edit" path=".." terminate=false selectedPage="timetable.config" selectedData="${timesTable.getTableType()}"/]
+<input type="hidden" name="${Parameters.CSV_EDIT_ROUTE}"  value=""/>
+</form>
+</p>
+<br/>
+[#assign qS = queryString?default("new=true")]
+[@macros.previewLinks queryString=qS path=".."/]
+
+<!-- loop through the various configurations, listing the active configs for this route -->
+[#list csvList as csv]
+<br/>
+<br/>
+<p id="${csv}">
+<H2>${csv} <a href="javascript:navigate('top')"><font size="-5">(top)</font></a></H2>
+[#assign columns = .vars[csv + Parameters.CSV_COL_NAMES]]
+[#assign csvData = .vars[csv + Parameters.CSV_DATA]]
+<table class="its">
+  <thead>    
+    <tr>
+      <td><a href="javascript:openPopUp('csvrow.edit?editID=NEW&csvFileName=${csv}&${qS}')"><B> ADD </B></a></td>
+      [#list columns as c]<th title="${c.details()}">${c.name()}</th>[/#list]
+    </tr>
+  </thead>
+  <tbody>
+  [#assign rowNum = 1]
+  [#list csvData as d]
+    ${funct.getTr(rowNum, "odd", "even")} 
+      <td><a href="javascript:openPopUp('csvrow.edit?editID=${d.hashCode()}&csvFileName=${csv}&${qS}')">edit</a></td>
+      [#list d.getFieldValues() as f]<td>${f?default("")}</td> [/#list]
+    </tr>
+    [#assign rowNum = 1 + rowNum]
+  [/#list]
+  </tbody>
+</table>
+</p>
+[/#list]
+</body>
+</html>

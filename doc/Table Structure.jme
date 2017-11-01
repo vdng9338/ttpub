@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Modelistic Software Ltd. (http://www.modelistic.com) -->
+<jme>
+	<diagram style="standardStyles.diagramStyle.fullDependencies" version="1.3.7">
+		<class yLocation="-1145" xLocation="2774" project="openSchedule" className="org.trimet.openSchedule.table.Cell"/>
+		<class yLocation="-3348" xLocation="3001" project="openSchedule" className="org.trimet.openSchedule.table.TimesTable"/>
+		<class yLocation="-1761" xLocation="3752" project="openSchedule" className="org.trimet.openSchedule.table.Footnote"/>
+		<class yLocation="-1855" xLocation="2096" project="openSchedule" className="org.trimet.openSchedule.table.Row"/>
+		<class yLocation="-1760" xLocation="3196" project="openSchedule" className="org.trimet.openSchedule.table.Column"/>
+	</diagram>
+</jme>

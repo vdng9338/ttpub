@@ -1,0 +1,71 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[@macros.head title="C O N F I G U R E (csv edit row) - ${timesTable.getRouteName()?default('')}" path=".."/]
+<body class="composite"
+ [#-- CLOSES the POP-UP WINDOW after EDITS committed --]
+ [#if RequestParameters.csvEditsMade?exists]onLoad="commitAndClose('${csvFileName}')"[#else]onLoad="this.focus();"[/#if]
+>
+
+[#-- 
+    EDIT CONFIGURATION FORM
+    
+    NOTE THAT THIS FORM CALLS ITSELF.  THE REASON IS THAT BY CALLING ITSELF,
+    THE SERVLET GETS IT'S CHANCE TO SAVE THE EDITED DATA BETWEEN CALLS.  THEN THE POPUP 
+    IS RE-RENDERED HERE.  FINALLY, THE onLoad method IN THE BODY TAG ABOVE WILL CALL A JS 
+    ROUTINTE TO REFRESH THE PARENT (SO IT SEES THE CHANGES) AND CLOSE THE POP-UP WINDOW
+--]
+[#if editID?has_content] 
+<FORM action="csvrow.edit" method="get">
+  <input type="hidden" name="${Parameters.EDIT_ID}"       value="${editID}"/>
+  <input type="hidden" name="${Parameters.EDITS_MADE}"    value="true"/>
+  <input type="hidden" name="${Parameters.EDIT_CSV_FILE}" value="${csvFileName}"/>
+  <input type="hidden" name="${Parameters.AGENCY}"        value="${agency?default('')}"/>
+  <input type="hidden" name="${Parameters.ROUTE}"         value="${route?default('')}"/>
+  <input type="hidden" name="${Parameters.DIR}"           value="${dir?default('')}"/>
+  <input type="hidden" name="${Parameters.KEY}"           value="${key?default('')}"/>
+  <input type="hidden" name="${Parameters.DATE}"          value="${date?default('')}"/>
+  [#if RequestParameters?exists && RequestParameters.method?exists ]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]
+  
+  <H2>Edit: ${csvFileName?default("")}</H2>
+  <table class="its">
+  <thead>
+    <tr>
+      [#list csvColNames as c]<th title="${c.details()}">${c.name()}</th>[/#list]
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="odd">
+      [#assign cellNum = 1]
+      [#list csvFieldValues as f]
+        <td>
+          [#assign editString = f?default('')]
+          [#assign width = editString?length]
+          [#if width < 1 || width > 20][#assign width = 20][/#if]
+          <input size="${width}" type="text" name="cell_${cellNum}" value="${editString}"></input>
+        </td>
+        [#assign cellNum = cellNum + 1]
+      [/#list]
+    </tr>
+  </tbody>
+  </table>
+  <input type="submit" name="submit" value="update"/>
+  <input type="reset"  name="reset"  value="reset"/>
+</FORM>
+<FORM action="working.edit" method="get" onSubmit="return confirmDelete();">
+  <input type="hidden" name="${Parameters.EDIT_ID}"        value="${editID}"/>
+  <input type="hidden" name="${Parameters.EDIT_CSV_FILE}"  value="${csvFileName}"/>
+  <input type="hidden" name="${Parameters.EDITS_MADE}"     value="delete"/>
+  [#if RequestParameters?exists && RequestParameters.method?exists ]
+    <input type="hidden" name="${Parameters.METHOD}"  value="${RequestParameters.method}"/>
+  [/#if]
+  
+  <input type="submit" name="submit" value="delete this config"/>
+</FORM>
+[#else]
+<B><BLINK>WARNING: the window is out of date.  PLEASE close and go back to the Configure window.</BLINK></B>
+[/#if]
+</body>
+</html>

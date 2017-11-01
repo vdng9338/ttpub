@@ -1,0 +1,3 @@
+Route,Direction,Service Key,Language,Rule,Start Hour,End Hour,,
+53,Inbound,Weekday,,BEGIN_TRIP,12,30,,"NOTE: End Hour 24 == Midnight, and anything beyond that is the hours into the next physical day, but it's a continuation of the current service day."
+53,Outbound,Weekday,,BEGIN_TRIP,0,12,,"NOTE: Start Hour of 0 == Midnight as well, but it's 24 service hours earlier than a setting of 24"

@@ -1,0 +1,23 @@
+[#ftl]
+[#setting locale="en_US"]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[#import "../include/mapMacros.ftl" as mapMacros]
+[@macros.head title="V I E W  -  ${timesTable.getRouteName()?default('')}" path=".." terminate=false/]
+  [@mapMacros.gMapsKey/]
+  [@mapMacros.mapStyle/]
+</head>
+<body class="composite">
+[@macros.navRouteForm selectedPage="mapntable.web" path=".." selectedData="${timesTable.getTableType()}" /]
+<br/>
+  [#assign pdfUrl = "../pdf/timetable.web?" + queryString?default("new=true")] 
+  <a href="${pdfUrl}">printable pdf</a>
+  <br/>
+  <H4>${timesTable.getRouteName()?default("")}</H4>
+  <H5>${timesTable.getKeyName()?default("")} -  ${timesTable.getDestination()?default("")}</H5>
+  <div id="map" style="width: 770px; height: 300px; border: thin solid #6688AA;"></div>
+  [@mapMacros.mapTimesTable columns=timesTable.getTimePoints() showStopIDs=timesTable.showStopIDs() rows=timesTable.getTimeTable() tableStyle="its" /]
+  [@macros.footnotes noteList=timesTable.getFootnotes() caption="Footnotes:" /]
+  [@mapMacros.gMapsCode/]
+</body>
+</html>  

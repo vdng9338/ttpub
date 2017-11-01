@@ -1,0 +1,435 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>smokeTest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">smokeTest</td></tr>
+</thead><tbody>
+<!--Basic Walk Through-->
+<tr>
+	<td>open</td>
+	<td>/ttpub/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Compare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Print</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Vertical View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[8]/b/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stop Level Data (TRANS)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Mock Data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Google Feed Spec Data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Exception</td>
+	<td></td>
+</tr>
+<!--Compare Test-->
+<tr>
+	<td>open</td>
+	<td>/ttpub/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Compare</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>routeList</td>
+	<td>label=1-Vermont</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>routeList</td>
+	<td>label=8-Jackson Park</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='submit' and @type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>1-Vermont</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>8-Jackson Park</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Exception</td>
+	<td></td>
+</tr>
+<!--Configure / Editor Test-->
+<tr>
+	<td>open</td>
+	<td>/ttpub/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View/Edit All Configurations for this Route &amp; Direction &amp; Key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ActiveServiceKeys</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Mock Data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ActiveServiceKeys</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Google Feed Spec Data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ActiveServiceKeys</td>
+	<td></td>
+</tr>
+<tr>
+    <td>assertTextNotPresent</td>
+    <td>Exception</td>
+    <td></td>
+</tr>
+<tr>
+    <td>clickAndWait</td>
+    <td>link=Stop Level Data (TRANS)</td>
+    <td></td>
+</tr>
+<tr>
+    <td>assertTextPresent</td>
+    <td>ActiveServiceKeys</td>
+    <td></td>
+</tr>
+<tr>
+    <td>assertTextNotPresent</td>
+    <td>Exception</td>
+    <td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Outbound</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Saturday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Sunday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ActiveServiceKeys</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Google Feed Spec Data</td>
+	<td></td>
+</tr>
+<!--VIEW TEST-->
+<tr>
+	<td>open</td>
+	<td>/ttpub/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=View</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=MAX Blue Line</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Saturday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Outbound</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//tr[59]/td[11]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>doors have to close before the ramp can deploy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Stop Level Data (TRANS)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//tr[55]/td[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>doors have to close before the ramp can deplo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Exception</td>
+	<td></td>
+</tr>
+<!--PRINT TEST-->
+<tr>
+	<td>open</td>
+	<td>/ttpub/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Print</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[18]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[19]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[20]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[21]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[22]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[23]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[24]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[25]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[26]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[27]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements[28]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Exception</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<!--#odd-ball routes-->
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=51-Vista</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Saturday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Outbound</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=54-Beaverton-Hillsdale Hwy, 56-Scholls Ferry Rd</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Washington Park Shuttle</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=MAX Red Line (Brochure)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

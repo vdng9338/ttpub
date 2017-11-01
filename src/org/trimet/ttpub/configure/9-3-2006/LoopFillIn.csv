@@ -1,0 +1,12 @@
+Route,Direction,Service Key,Language,Table Position,Stop IDs,Running Time (in minutes),,
+53,Inbound,Weekday,,LEFT,9977,25,,
+53,Outbound,Weekday,,RIGHT,9977,25,,
+108,Inbound,"Weekday, Saturday, Sunday",,LEFT,5028,45,,
+108,Outbound,"Weekday, Saturday, Sunday",,RIGHT,5028,30,,
+73,Inbound,"Weekday, Saturday, Sunday",,LEFT,10300,25,,
+73,Outbound,"Weekday, Saturday, Sunday",,RIGHT,11151,25,,
+115,Inbound,"Weekday, Saturday, Sunday",,LEFT,8484,50,,
+115,Outbound,"Weekday, Saturday, Sunday",,RIGHT,5824,60,,"NOTE: for some reason, this huge number gives us the exact data (on 9/15/2006) that we want -- need to fix this in the code at some point"
+119,Inbound,"Weekday, Saturday, Sunday",,LEFT,1551,65,,
+119,Inbound,Sunday,,LEFT,1551,85,,
+119,Outbound,"Weekday, Saturday, Sunday",,RIGHT,1550,65,,

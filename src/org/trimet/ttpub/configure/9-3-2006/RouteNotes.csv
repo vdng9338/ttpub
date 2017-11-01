@@ -1,0 +1,70 @@
+Route,Direction,Service Key,Language,Footnote,Sequence
+1,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>N (North-Fish)</b> stops on 6th Avenue.",50
+4,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>N (North-Fish)</b> stops on 6th Avenue.",50
+8,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast-Raindrop)</b> stops on 6th Avenue.",50
+9,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast-Raindrop)</b> stops on 6th Avenue.",50
+10,Outbound,"Weekday, Saturday, Sunday",en,<b>Note:</b> Service to 33 & Sunderland provided by transfer to Sunderland Shuttle bus at 27th & Saratoga,50
+10,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast-Raindrop)</b> stops on 6th Avenue.",50
+12,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+14,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SE (Southeast-Beaver)</b> stops on 5th Avenue.",50
+16,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>N (North-Fish)</b> stops on 6th Avenue.",50
+17,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>N (North-Fish)</b> stops on 6th Avenue.",50
+19,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast-Raindrop)</b> stops on 6th Avenue.",50
+31,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+32,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+33,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+35,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+35,Outbound,Weekday,en,<b>Note:</b> Service between Oregon City and Canby sponsored by CAT-Canby Area Transit.,50
+36,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+38,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+40,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+43,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+44,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+45,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+54,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+55,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+56,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+58,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+61,Outbound,Weekday,en,<b>Note:</b> Buses to Beaverton TC serve: All Marquam Hill stops; Capitol Hwy & Sunset; Beaverton Hillsdale Hwy & Oleson Rd; Valley Community Church Park & Ride; 110th at 4220; and Beaverton TC.,50
+61,Inbound,Weekday,en,<b>Note:</b> Buses to Marquam Hill serve: Beaverton TC; 110th at 4130; Valley Community Church Park & Ride; Beaverton Hillsdale Hwy & Oleson Rd; Capitol Hwy & Sunset; all Marquam Hill stops.,50
+64,Outbound,Weekday,en,"<b>Note:</b> Buses to Tigard TC serve: All Marquam Hill stops; Capitol Hwy & Sunset, 26th; Troy & 35th; Capitol Hwy & Taylors Ferry; Barbur TC; Pacific Hwy & 74th; and Tigard TC.",50
+64,Inbound,Weekday,en,"<b>Note:</b> Buses to Marquam Hill serve: Tigard TC; Pacific Hwy & 74th; Barbur TC; along Capitol Hwy at Taylors Fy, 35th, 26th & Sunset; and all Marquam Hill stops.",50
+65,Outbound,Weekday,en,"<b>Note:</b> Buses to Barbur serve: All Marquam Hill stops; then all stops along Terwilliger to Barbur Blvd & Bertha; then at 19th & Multnomah; Spring Garden & 19th & 14th; Taylors Ferry & Spring Garden, and Terwilliger & Carson. <a href=../alerts/65-marquamhill.htm"">Rider Alert</a>""",50
+65,Inbound,Weekday,en,"<b>Note:</b> Buses to Marquam Hill serve: Terwilliger & Carson; 7th and 11th; Spring Garden & 14th and 19th; 19th & Multnomah; Barbur & Bertha; all stops along Terwilliger and all Marquam Hill stops. <a href=../alerts/65-marquamhill.htm"">Rider Alert</a>""",50
+66,Outbound,Weekday,en,"<b>Note:</b> Buses to Hollywood TC serve: all Marquam Hill stops; 1st & Arthur; Powell & Milwaukie, 21st and 26th; along 39th Avenue at Powell, Division, Hawthorne, Belmont, Burnside & Glisan; and Hollywood TC.",50
+66,Inbound,Weekday,en,"<b>Note:</b> Buses to Marquam Hill serve: Hollywood TC; stops along 39th Avenue at Glisan; Burnside, Belmont, Hawthorne, Division & Powell; Powell & 26th, 21st and Milwaukie; 1st & Arthur; and all Marquam Hill stops.",50
+74,Outbound,Weekday,en,"<b>Note:</b> Buses to Southeast serve: Rose Quarter TC; NE Multnomah & Grand,7th, 9th; Holladay & 11th; Irving 12th, 15th, 18th, 21st; Glisan & 28th, 32nd & Laddington; SE 39th & Burnside, Belmont, Hawthorne, Division, Powell, Holgate, Steele, Knight; Woodstock & 46th and 52nd & Woodstock.",50
+74,Inbound,Weekday,en,"<b>Note:</b> Buses to Lloyd District and Rose Quarter TC serve: SE Woodstock & 51st, 46th; 39th & Woodstock, Steele, Holgate, Powell, Division, Hawthorne, Belmont, Burnside; NE Glisan & Laddington, 32nd, & 28th; Irving & 21st, 18th, 15th & 12th; 11th & Holladay and Multnomah; Multnomah & 9th, 7th & Grand and Rose Quarter TC.",50
+79,Outbound,Weekday,en,<b>Note:</b> Service to South End Rd portion of Line 79 operates a one-way loop. Buses from Oregon City TC travel South End Rd then Hwy 99.,50
+85,Inbound,Weekday,en,<b>Note:</b> Buses make stops only along Basin Avenue; at Anchor & Channel; Albina/Mississippi MAX Station and Rose Quarter TC.,50
+"90,100,190","Inbound, Outbound","Weekday, Saturday, Sunday",en,"If you are unable to climb steps and wish to board a low-floor MAX car, wait mid-platform behind the white bumpy strip where you can be seen by the train operator. Ramps are located at the two doors in the center of the low-floor car. If the ramp is not extended by the MAX operator, push the blue button with the accessibility symbol located on either side of the door. The doors have to close before the ramp can deploy.",50
+90,"Inbound, Outbound",Weekday,en,A Trains arrive at Pioneer Square at 20 & 50 minutes past the hour for connections with buses that leave downtown at 02 & 32 minutes past the hour.,50
+92,Outbound,Weekday,en,"<b>Note:</b> Buses to Beaverton serve: W (West-Deer) shelters along 5th at Stark, Alder, Yamhill, Salmon and Madison; Market & 4th and 2nd; Naito & Harrison; then travel express with no stops to Progress Park & Ride at Hwy 217 & Scholls Ferry; then serve all stops to Murrayhill.",50
+92,Inbound,Weekday,en,"<b>Note:</b> Buses to downtown Portland serve all stops between Murrayhill and Progress Park & Ride at Hwy 217 & Scholls Ferry; then travel express with no stops to SW Naito & Harrison; then serve: Clay at 1st and 5th; 6th Avenue at Jefferson, Main, Taylor, Morrison, Washington, Oak, Pine and Davis.",50
+94,Outbound,Weekday,en,"<b>Note:</b> Buses to Sherwood serve: SW (Southwest Rose) Shelters along 5th at Stark, Alder, Yamhill, Salmon, Madison, Columbia and Montgomery (PSU); then travel express to Barbur & Bertha; then stop at: Barbur TC; Pacific Hwy at 74th, Greenburg Rd, Walnut, Gaarde, Bull Mountain, Durham and Fischer; in Sherwood at Regal Cinemas and Railroad & Washington.",50
+94,Inbound,Weekday,en,"<b>Note:</b> Buses to Portland serve: Sherwood at Railroad & Washington and Regal Cinemas; Pacific Hwy & Fischer, Durham, Bull Mountain, McDonald, Walnut, Main, 74th and Capitol Hwy; Barbur TC; Barbur & Bertha; then travel express with no stops to SW 6th & Mill, Jefferson, Main, Taylor, Morrison, Washington, Oak and Burnside.",50
+95,Outbound,Weekday,en,"<b>Note:</b> Buses to Sherwood serve: NE 11th & Holladay; Multnomah & 9th, 7th; Rose Quarter TC; SW (Southwest-Rose) shelters along 5th at Stark, Alder, Yamhill, Salmon, Madison; on Market at 4th and 2nd; Harbor & Mongtgomery and Moody; then travel express with no stops to Pacific Hwy & 74th and Pacific Hwy & Walnut. Buses then serve all stops to Sherwood.",50
+95,Inbound,Weekday,en,"<b>Note:</b> Buses to Lloyd Center serve all stops between Sherwood and Pacific Hwy & Walnut in Tigard; then stop at Pacific Hwy & 74th. Buses travel express with no stops to downtown Portland stopping at: Harbor at Moody and Montgomery; Clay at 1st and 5th; 6th Avenue at Jefferson, Main, Taylor, Morrison, Washington, Oak and Burnside; then Rose Quarter TC; NE Multnomah at Grand, 7th and 9th; and Holladay & 11th.",50
+96,Outbound,Weekday,en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+99,Outbound,Weekday,en,"<b>Note:</b> Buses to Oregon City serve: S (South-Leaf) shelters along 5th at Oak, Washington, Morrison, Taylor, Main & 4th and 1st then travel express with no stops to Milwaukie, Main & Milport; then Milwaukie TC; McLoughlin Blvd at Courtney, Oak Grove, Concord, Roethe, Jennings and Gloucester; Oregon City TC; Molalla Ave & Pearl and Clairmont; and Clackamas Community College.",50
+99,Inbound,Weekday,en,"<b>Note:</b> Buses to Portland serve: Clackamas Community College; Molalla Ave & Clairmont and Pearl; Oregon City TC; McLoughlin Blvd at Gloucester, Jennings, Roethe, Concord, Oak Grove and Courtney; Milwaukie TC; Main & Milport; then travel with no stops to downtown; SW Main & 2nd and 4th; and 6th at Taylor, Morrison, Washington, Oak and Burnside.",50
+101,Outbound,"Weekday, Saturday",en,"<b>Note:</b> In downtown Portland, board at the <b>W (West-Deer)</b> stops on 5th Avenue.",50
+101,Inbound,"Weekday, Saturday",en,<b>Note:</b> Passengers leaving Vermont Maplewood Loop in the p.m. read outbound times at 45th & Vermont West for service to City Center.,50
+104,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SE (Southeast-Beaver)</b> stops on 5th Avenue.",50
+108,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SW (Southwest-Rose)</b> stops on 5th Avenue.",50
+109,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SE (Southeast-Beaver)</b> stops on 5th Avenue.",50
+110,Outbound,"Weekday, Saturday",en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+110,Inbound,Weekday,en,"<b>Note:</b> Passengers leaving from 136th Avenue loop in the p.m., read outbound times at 82nd & Foster for service to City Center.",50
+110,Inbound,Saturday,en,"<b>Note:</b> Passengers leaving from 136th Avenue loop in the p.m., read outbound times at 82nd & Foster for service to Portland Mall.",50
+112,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast-Raindrop)</b> stops on 6th Avenue.",50
+115,Outbound,"Weekday, Saturday, Sunday",en,<b>Note:</b> After 11p.m. you may request the bus operator to serve stops on NW Thurman beyond 25th to Gordon.,50
+117,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>SE (Southeast-Beaver)</b> stops on 5th Avenue.",50
+119,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>S (South-Leaf)</b> stops on 5th Avenue.",50
+133,Outbound,"Weekday, Saturday, Sunday",en,"<b>Note:</b> In downtown Portland, board at the <b>NE (Northeast Raindrop)</b> stops on 6th Avenue.",50
+140,Outbound,"Weekday, Saturday, Sunday",en,<b>Note:</b> In downtown Portland board at the <b>N (North-Fish)</b> stops on 6th Avenue.,50
+155,Outbound,Sunday,en,"<b>Note:</b> On Sunday, Lines 155 and 156 operate in one direction, as a loop. The 155 route travels from Clackamas Town Center TC on Sunnyside Rd to 147th; returning to Clackamas Town Center, the bus continues on the 156 route, serving 132nd, Hubbard & Mather Rd.",50
+179,Outbound,Weekday,en,<b>Note:</b> Service to South End Rd portion of Line 79 operates a one-way loop. Buses from Oregon City TC travel South End Rd then Hwy 99.,50
+10090,"Inbound, Outbound","Weekday, Saturday, Sunday",en,<B>Note:</B> Schedules for lines Max Blue and Red are combined on this schedule.,40
+254,"Inbound, Outbound","Weekday, Saturday, Sunday",en,<B>Note:</B> Schedules for lines 54 and 56 are combined on this schedule.  Line 54 serves Beaverton Transit Center.  Line 56 serves Washington Square Transit Center.,40
+280,"Inbound, Outbound",Weekday,en,<B>Note:</B> Weekday schedules for lines 80 and 81 are combined on this schedule.  Line 80 serves Troutdale Road between Stark & Halsey.  Line 81 serves 257th Avenue.,40
+155156,"Inbound, Outbound",Sunday,en,"<B>Note:</B> On Sundays, lines 155 and 156 operate as a loop in one direction.  Line 155 travels from Clackamas Town Center TC on Sunnyside Road to 147th; returning to Clackamas Town Center, the bus continues on the 156 route, serving 132nd, Hubbard & Mather Roads.",40

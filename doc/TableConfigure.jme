@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Modelistic Software Ltd. (http://www.modelistic.com) -->
+<jme>
+	<diagram style="standardFilteredStyles.diagramStyle.methodsOnly" version="1.3.7">
+		<class yLocation="-1129" xLocation="1699" project="openSchedule" className="org.trimet.openSchedule.configure.Index"/>
+		<class yLocation="-11" xLocation="1595" project="openSchedule" className="org.trimet.openSchedule.configure.ComboRoutes"/>
+		<class yLocation="-298" xLocation="1391" project="openSchedule" className="org.trimet.openSchedule.configure.RouteNotes"/>
+		<class yLocation="-302" xLocation="1839" project="openSchedule" className="org.trimet.openSchedule.configure.TripNotes"/>
+		<class yLocation="-317" xLocation="2787" project="openSchedule" className="org.trimet.openSchedule.configure.LoopRoutes"/>
+		<class yLocation="-53" xLocation="1155" project="openSchedule" className="org.trimet.openSchedule.configure.MergeTPNotes"/>
+		<class yLocation="-59" xLocation="2065" project="openSchedule" className="org.trimet.openSchedule.configure.TimePoints"/>
+		<class yLocation="-76" xLocation="2547" project="openSchedule" className="org.trimet.openSchedule.configure.LayoverNotes"/>
+		<class yLocation="-301" xLocation="2292" project="openSchedule" className="org.trimet.openSchedule.configure.RouteNames"/>
+		<class yLocation="-299" xLocation="950" project="openSchedule" className="org.trimet.openSchedule.configure.PatternNotes"/>
+		<class yLocation="-1114" xLocation="1152" project="openSchedule" className="org.trimet.openSchedule.configure.CsvLoader"/>
+	</diagram>
+</jme>

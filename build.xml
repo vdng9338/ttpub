@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE project [
+    <!ENTITY utils         SYSTEM "./config/ant/build.utils"         >
+    <!ENTITY compile       SYSTEM "./config/ant/build.compile"       >
+    <!ENTITY web           SYSTEM "./config/ant/build.web"           >
+    <!ENTITY cmdline       SYSTEM "./config/ant/build.cmdline"       >
+]>
+
+<project name="ttpub" default="clean-most-war" basedir=".">
+   <property name="project.dir"                    value="ttpub"/>
+   <property name="package-name"                   value="org.trimet.${project.dir}"/>
+   <property name="db-package-name"                value="${package-name}.db"/>
+   <property name="db-package-path"                value="org/trimet/${project.dir}/db"/>
+   <property name="gui"                            value="false"/>
+
+   <property name="build.dir"                      value="${basedir}/build"/>
+   <property name="build.gen-src.dir"              value="${build.dir}/gen-src"/>
+   <property name="build.xml.dir"                  value="${build.dir}/xml"/>
+   <property name="build.classes.dir"              value="${build.dir}/classes"/>
+
+   <property name="src-exclude"                    value="**/trimet/**/*.java"/>
+   <property name="config.dir"                     value="${basedir}/config"/>
+   <property name="lib.dir"                        value="${basedir}/lib"/>
+   <property name="doc.dir"                        value="${basedir}/doc"/> 
+   <property name="apidoc.dir"                     value="${doc.dir}/api"/> 
+   <property name="src.dir"                        value="${basedir}/src"/>
+   <property name="test.dir"                       value="${basedir}/tests "/>	
+   <property name="schema.dir"                     value="${src.dir}/xml/"/>
+   <property name="java.src.dir"                   value="${src.dir}/java"/>
+   <property name="appxml.src.file"                value="${basedir}/src/application.xml"/>
+   <property name="html.dir"                       value="${src.dir}/org/timetablepublisher/view/web/html"/>
+   <property name="war.file"                       value="../${project.dir}.war"/>
+   <property name="cmdline.zip"                    value="../${project.dir}-cmdline.zip"/>   
+   <property name="jar.file"                       value="${project.dir}.jar"/>   	
+   <property name="hibernate.ver"                  value="hibernate-3.1"/>
+   <property name="gwt.www.dir"                    value="${build.dir}/www"/>   
+	
+   <path id="lib.class.path">
+      <pathelement path="${build.classes.dir}"/>
+      <fileset dir="${lib.dir}">
+         <include name="**/*.jar"/>
+      </fileset>
+   </path>
+
+   &utils;
+   &compile;
+   &web;
+   &cmdline;
+
+   <!-- EXECUTE THE CLIENT - this routine runs the BATCH TimeTable Generator, which generates the TriMet static web pages -->
+   <target name="run" description="Execute Simple Client">
+       <echo message="${user.dir}/src/templates"/>
+       <java classname="org.timetablepublisher.view.cmdline.TimeTableBatchGenerator"
+            fork="true"
+            classpathref="lib.class.path"
+            dir="${build.classes.dir}"
+        >
+           <arg value="-tableType"/>
+           <arg value="GTFS"/> <!-- TYPE OF TIME TABLE TO CREATE, EG: TRANS, MOCK, etc... -->
+           <arg value="-tdir"/>
+           <arg value="${user.dir}/src/templates"/>
+           <arg value="-zip"/>
+	       <arg value="${user.dir}/build/zips/"/>
+	       <arg value="-once"/>
+       </java>
+   </target>    
+   <target name="clean-most-war" description="Typical Build Routine while Developing"    depends="clean, most, war"/>
+   <target name="most"    description="Generate source and compile everything."          depends="compile"/>
+   <target name="not-hib" description="Compile everything -- but dont' reveng Hibernate" depends="compile, war"/>
+   <target name="all"     description="Compile Everything, Create War, Create javadocs"  depends="most, war, doc"/>
+</project>

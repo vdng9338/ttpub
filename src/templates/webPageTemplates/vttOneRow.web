@@ -1,0 +1,16 @@
+[#ftl]
+[#import "../include/functions.ftl" as funct]
+[#import "../include/macros.ftl"    as macros]
+[@macros.head title="TimeTable Publisher: ${timesTable.getRouteName()?default('')}" path=".."/]
+<body class="composite">
+<FORM action="vtt.web" method="get">
+[@macros.navRouteForm path=".."/]
+<br/>
+[#assign qS = queryString?default("new=true")]
+[@macros.previewLinks queryString=qS path=".."/]
+<H1>${timesTable.getRouteName()?default("")}</H1>
+<H5>${timesTable.getKeyName()?default("")} -  ${timesTable.getDestination()?default("")}</H5>
+[@macros.verticalTimesTable tt=timesTable stops=timesTable.getTimePoints() times=timesTable.getTimeTable() tableStyle="its" /]
+[@macros.footnotes noteList=timesTable.getFootnotes() caption="Footnotes:" /]        
+</body>
+</html>

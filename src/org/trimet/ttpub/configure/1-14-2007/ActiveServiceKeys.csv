@@ -1,0 +1,5 @@
+Agency,Route,Direction,Service Key,Language,Active Service Keys
+*,*,*,Weekday,,"W, f, F"
+*,*,*,Saturday,,S
+*,*,*,Sunday,,U
+TriMet,66,Inbound,*,,l

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="src"/>
+	<classpathentry kind="var" path="JRE_LIB" rootpath="JRE_SRCROOT" sourcepath="JRE_SRC"/>
+	<classpathentry kind="con" path="C:/java/DEV/ttpub/build/classes"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/args4j/args4j-2.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/args4j/args4j-tools-2.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/freemarker/freemarker.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/antlr-2.7.6rc1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/asm.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/c3p0-0.9.1-pre5a.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/ehcache-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/jta.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-3.1/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-build-tools/hibernate-tools.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/hibernate-build-tools/jtidy-r8-21122004.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/iText/itext-1.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/j2ee/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/junit/junit-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/log4j-1.2.12.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/opencsv/opencsv-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/velocity/velocity-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/velocity/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/velocity/velocity-tools-generic-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/xmlbeans/jsr173_api.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/xmlbeans/resolver.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/xmlbeans/xbean.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/xmlbeans/xbean_xpath.jar"/>
+	<classpathentry kind="lib" path="C:/java/DEV/ttpub/lib/xmlbeans/xmlpublic.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

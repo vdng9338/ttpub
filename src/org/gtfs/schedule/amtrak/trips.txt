@@ -1,0 +1,33 @@
+route_id,service_id,trip_id,trip_headsign,block_id
+1,d,11,Coast Starlight - Los Angeles,0
+1,d,14,Coast Starlight - Seattle,1
+3,d,27,Empire Builder - Seattle,1
+3,d,28,Empire Builder - Chicago,0
+4,d,500,Amtrak Cascades,1
+4,d,501,Amtrak Cascades,0
+4,d,504,Amtrak Cascades,1
+4,d,506,Amtrak Cascades,1
+4,d,507,Amtrak Cascades,0
+4,d,508,Amtrak Cascades,1
+4,d,509,Amtrak Cascades,0
+4,d,510,Amtrak Cascades,1
+4,d,513,Amtrak Cascades,0
+4,d,516,Amtrak Cascades,1
+4,d,517,Amtrak Cascades,0
+3,d,807,Empire-Builder - Seattle,1
+3,d,808,Empire-Builder -  Spokane,0
+4,d,5501,Amtrak Cascades-Thruway Bus,0
+4,d,5503,Amtrak Cascades-Thruway Bus,0
+4,d,5505,Amtrak Cascades-Thruway Bus,0
+4,d,5508,Amtrak Cascades-Thruway Bus,1
+4,d,5528,Amtrak Cascades-Thruway Bus,1
+4,d,8900,Amtrak Cascades-Thruway Bus,1
+4,d,8906,Amtrak Cascades-Thruway Bus,1
+4,d,8907,Amtrak Cascades-Thruway Bus,0
+4,d,8909,Amtrak Cascades-Thruway Bus,0
+4,d,8911,Amtrak Cascades-Thruway Bus,0
+4,d,8914,Amtrak Cascades-Thruway Bus,1
+4,d,8948,Amtrak Cascades-Thruway Bus,1
+4,d,8957,Amtrak Cascades-Thruway Bus,0
+2,y,8552,Valley Retriever,1
+2,y,8575,Valley Retriever,0

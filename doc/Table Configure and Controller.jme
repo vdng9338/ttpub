@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Modelistic Software Ltd. (http://www.modelistic.com) -->
+<jme>
+	<diagram style="standardStyles.diagramStyle.dependencies" version="1.3.7">
+		<class yLocation="1224" xLocation="1272" project="openSchedule" className="org.trimet.openSchedule.configure.Index"/>
+		<class yLocation="-199" xLocation="1226" project="openSchedule" className="org.trimet.openSchedule.persistence.trans.CsvTableUtils"/>
+		<class yLocation="-677" xLocation="722" project="openSchedule" className="org.trimet.openSchedule.persistence.trans.TrimetTimesTable"/>
+		<class yLocation="-95" xLocation="152" project="openSchedule" className="org.trimet.openSchedule.persistence.trans.TransQueryUtils"/>
+		<class yLocation="1279" xLocation="628" project="openSchedule" className="org.trimet.openSchedule.db.ScheduledStopTime"/>
+		<class yLocation="687" xLocation="374" project="openSchedule" className="org.trimet.openSchedule.persistence.trans.HibernateUtil"/>
+		<class yLocation="1282" xLocation="-177" project="openSchedule" className="org.trimet.openSchedule.db.Location"/>
+		<class yLocation="-1719" xLocation="562" project="openSchedule" className="org.trimet.openSchedule.view.terminal.BatchTimeTableGenerator"/>
+		<class yLocation="-1302" xLocation="1417" project="openSchedule" className="org.trimet.openSchedule.view.pdf.PdfDesign"/>
+		<class yLocation="-1297" xLocation="1131" project="openSchedule" className="org.trimet.openSchedule.view.pdf.PdfTrimetDesignImpl"/>
+		<class yLocation="-1082" xLocation="97" project="openSchedule" className="org.trimet.openSchedule.view.ZipTimeTables"/>
+	</diagram>
+</jme>

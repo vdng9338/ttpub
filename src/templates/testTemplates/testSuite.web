@@ -1,0 +1,23 @@
+[#ftl]
+<table>
+<tr>
+<td>
+Test Suite: ${Parameters.NOW?datetime}
+<BR/><BR/>
+[#-- if this is a the ttpub application tests, then set default url to http://trinet/ ... else set it to trimet.org dev site http://dev  --]
+[#assign svr = "http://dev"]
+[#if baseURL?has_content]
+   [#assign svr = testURL]
+[/#if]
+<script>document.write('<B>To Run these tests, cut and paste the following URL into the browser navigation input form:</B><BR/>chrome://selenium-ide/content/selenium/TestRunner.html?auto=true&baseURL=${svr}&test='+self.location);</script>
+<BR/><BR/>
+</td>
+</tr>
+[#if testSuite?has_content]
+[#list testSuite as ts]
+<tr>
+<td><a target="testFrame" href="${ts.getValue()}">${ts.getKey()}</a></td>
+</tr>
+[/#list]
+[/#if]
+</table>

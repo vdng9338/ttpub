@@ -1,0 +1,17 @@
+LIST OF crontab THAT RUN ON VARIOUS TTPUB MACHINES
+
+# ON PAN
+11 3 * * 6 /home/ttpub/cron.sh >/dev/null 2>&1
+11 3 * * 5 /home/ttpub/devcron.sh >/dev/null 2>&1
+
+
+# ON WWWDEV
+30 4 * * * /home/wwwdev/new-wk  >/dev/null 2>&1
+40 4 * * * /home/wwwdev/new-sat >/dev/null 2>&1
+50 4 * * * /home/wwwdev/new-sun >/dev/null 2>&1
+
+
+# ON WWW3
+30 4 * * 6 /u01/trimet/new-wk
+30 2 * * 0 /u01/trimet/new-sat
+45 4 * * 6 /u01/trimet/new-sun

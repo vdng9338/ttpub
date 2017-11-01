@@ -1,0 +1,52 @@
+Route,Direction,Service Key,Language,Rule,Source Timepoint,Printed Timepoint,Symbol,Footnote,Sequence,,"NOTE: Routes 89 and 31 have 'invisible' merges, which don't footnote (for 89, see PatternNotes.csv)"
+1,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7646,7636,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10,,
+1,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7807,7789,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10,,
+101,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7807,7789,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10,,
+101,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7646,7636,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10,,
+4,Inbound,"Weekday, Sunday",en,FORCE,7633,7631,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10,,
+4,Outbound,"Weekday, Sunday",en,MERGE,7807,7789,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10,,
+4,Inbound,Saturday,en,FORCE,7633,7631,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10,,
+4,Outbound,Saturday,en,MERGE,7807,7789,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10,,
+104,Inbound,"Weekday, Sunday",en,FORCE,7807,7789,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10,,
+104,Outbound,"Weekday, Sunday",en,MERGE,7633,7631,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10,,
+104,Inbound,Saturday,en,FORCE,7807,7789,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10,,
+104,Outbound,Saturday,en,MERGE,7633,7631,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10,,
+108,Inbound,Weekday,en,FORCE,7777,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10,,
+108,Outbound,"Weekday, Saturday",en,MERGE,7639,7626,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10,,
+108,Inbound,"Saturday, Sunday",en,FORCE,7777,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown.,10,,
+108,Outbound,Sunday,en,MERGE,7639,7626,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+8,Inbound,"Weekday, Saturday",en,FORCE,7639,7626,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10
+8,Outbound,"Weekday, Saturday",en,MERGE,7777,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+8,Inbound,Sunday,en,FORCE,7639,7626,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+8,Outbound,Sunday,en,MERGE,7777,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+9,Inbound,"Weekday, Saturday",en,FORCE,7633,7631,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+9,Outbound,"Weekday, Saturday",en,MERGE,7803,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+9,Inbound,Sunday,en,FORCE,7633,7631,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10
+9,Outbound,Sunday,en,MERGE,7803,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+109,Inbound,"Weekday, Saturday",en,FORCE,7803,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+109,Outbound,"Weekday, Saturday",en,MERGE,7633,7631,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+109,Inbound,Sunday,en,FORCE,7803,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10
+109,Outbound,Sunday,en,MERGE,7633,7631,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+10,Outbound,Saturday,en,MERGE,7777,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+12,Inbound,"Weekday, Sunday",en,FORCE,7746,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10
+12,Outbound,"Weekday, Sunday",en,MERGE,7639,7626,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+12,Outbound,"Weekday, Sunday",en,MERGE,12787,12781,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+12,Inbound,Saturday,en,FORCE,7746,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+12,Outbound,Saturday,en,MERGE,7639,7626,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+112,Inbound,"Weekday, Saturday",en,FORCE,7639,7626,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+112,Outbound,"Weekday, Saturday",en,MERGE,7746,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+112,Inbound,Sunday,en,FORCE,7639,7626,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 2&32 minutes past the hour.,10
+112,Outbound,Sunday,en,MERGE,7746,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 2&32 minutes past the hour for direct connections from other lines.,10
+17,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7645,7631,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+17,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7807,7789,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+117,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7807,7789,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+117,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7645,7631,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+19,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7640,7627,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+19,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7746,7767,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+119,Inbound,"Weekday, Saturday, Sunday",en,FORCE,7746,7767,A,Arrives at SOURCE.NAME (Stop ID SOURCE.ID) for direct connections with other lines that leave downtown at 32 minutes past the hour.,10
+119,Outbound,"Weekday, Saturday, Sunday",en,MERGE,7640,7627,A,Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,10
+119,Outbound,"Weekday, Saturday, Sunday",en,MERGE,1728,1764,*,Arrives at SOURCE.NAME (Stop ID SOURCE.ID).,10
+89,"Inbound, Outbound","Weekday, Saturday, Sunday",en,MERGE,10057,10039,,,0
+31,"Inbound, Outbound","Weekday, Saturday, Sunday",en,MERGE,8181,8183,,,0
+135,Outbound,"Weekday, Saturday, Sunday",en,FORCE,12763,12769,XX,TESTING: Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,0
+135,Inbound,"Weekday, Saturday, Sunday",en,FORCE,12763,12779,XX,TESTING: Board at SOURCE.NAME (Stop ID SOURCE.ID).  Buses wait until 32 minutes past the hour for direct connections from other lines.,0

@@ -1,0 +1,42 @@
+Route,Direction,Service Key,Language,Time Point Stop ID,Public Stop ID,Stop Name
+*,Inbound,*,,9573,3007,NW 6th & Irving Union Station
+*,Outbound,*,,9573,9302,NW 5th & Hoyt Union Station
+*,*,*,,,4851,River Road & Jennings
+*,*,*,,,4852,River Road & Jennings
+*,*,*,,,4866,River Road & Oak Grove
+*,*,*,,,4865,River Road & Oak Grove
+*,*,*,,,8224,Milwaukie Transit Center
+*,*,*,,,8220,Milwaukie Transit Center
+*,*,*,,,12742,Clackamas Transit Center
+*,*,*,,,12740,Clackamas TC Max Station
+4,Outbound,*,, AkChaP,43,
+4,Inbound,*,, AkChaP,42,
+*,*,*,, Tay4,12769,
+*,*,*,, Wash4,12771,
+*,*,*,, Main3,12786,
+*,*,*,, Oak3,12780
+*,*,*,, Col4,1112
+*,*,*,, HolGnd,2168
+*,*,*,, HolMLK,5917
+*,*,*,, Jeff5,12790
+*,*,*,, Hal4,12763
+*,*,*,, Salm4,12768
+*,*,*,, Stk3,12781
+*,*,*,, LO3Mad,12787
+*,*,*,, Pin3,12779
+*,*,*,, BdwJck,612
+*,*,*,, LO4Oak,12773
+*,*,*,, LO4Pin,12774
+*,*,*,, LO3Sal,12785
+*,*,*,, LO3Man,12786
+*,*,*,, Brn4,772
+*,*,*,, Mad1,3635
+*,*,*,, CorMit,1147
+*,*,*,, Carr4,12762
+*,*,*,, Was9,8100
+*,*,*,, Div162,1415
+*,*,*,, BdwHyS,9813
+*,*,*,, HytBdW,9813
+3333,Inbound,*,,TESTX,1111
+3333,Outbound,*,,TESTY,1111
+4444,Outbound,*,,4444,TESTX

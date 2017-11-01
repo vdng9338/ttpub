@@ -1,0 +1,79 @@
+[#ftl strip_whitespace="true" attributes={"content_type" : "text/xml"}]
+[#setting number_format="0.##########"/]
+[#import "include/functions.ftl" as funct]
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<times>[#if timesTable?exists ][@printTable
+     route=timesTable.getRouteName()
+     dir=timesTable.getDirName()        
+     dest=timesTable.getDestination()
+     key=timesTable.getKeyName()
+     date=timesTable.getDate()
+     columns=timesTable.getTimePoints() 
+     rows=timesTable.getTimeTable()
+     footnotes=timesTable.getFootnotes()
+     showStopIDs=timesTable.showStopIDs()/][/#if]</times>
+[#-- 
+    Below are freemarker Macros and Functions:  
+    Freemarker Macros output (print) everything within the #macro directive 
+    (when called from above), whereas Freemarker Functions don't print anything
+    ...but they do *need* to return a value back to the caller (which can then
+    be output by the caller).
+  --]
+[#--
+    PRINT TABLE
+    
+    This MACRO does the majority of the templating work.
+    It outputs the time-table contents (including the route, direction and 
+    service key elements).  All elements are tucked under an element signifying
+    the service key (eg: <weekday>, <saturday>, <sunday>)
+  --]
+[#macro printTable route dir dest key date columns rows footnotes showStopIDs]
+[#if columns?exists]
+  [#assign numCols=columns?size]
+  [#assign numRows=rows?size]
+  [#assign rightNow="unknown"]
+  [#if now?exists ]
+    [#assign rightNow=now?datetime?xml]
+  [/#if]
+<direction>Direction: ${dir}</direction>
+<effective-date>Effective: ${date}</effective-date>
+<this-file-create-date>Updated: ${rightNow}</this-file-create-date>[#if numCols > 0 && numRows > 0][@printTimeTable route=route dir=dir dest=dest key=key date=date columns=columns rows=rows footnotes=footnotes showStopIDs=showStopIDs rightNow=rightNow/][/#if][/#if][/#macro]
+
+[#-- VERY IMPORTANT NOTE !!!!! : be VERY CAREFUL changing the format of the template...the spaces are all intentional...adding code-readable WHITESPACE SCREWS UP InDesign --]
+[#macro printTimeTable route dir dest key date columns rows footnotes showStopIDs rightNow]
+  [#assign numCols=columns?size]
+  [#assign N=numCols - 1]
+  [#assign keyLen=2]
+  [#assign destLen=numCols - 2]
+  [#if numCols <= 2]
+    [#assign keyLen=1]
+    [#assign destLen=1]
+  [/#if]
+  [#assign numRows=rows?size + 3]
+  [#if footnotes?has_content]
+    [#assign numRows=numRows + 1]
+  [/#if]
+
+<Table xmlns:aid="http://ns.adobe.com/AdobeInDesign/4.0" Direction="${dir?xml}" Effective="${date?xml}" Updated="${rightNow?xml}" aid:table="table" aid:trows="${numRows}" aid:tcols="${numCols}" >
+  [#-- PRINT THE TABLE HEADER, WHICH IS MADE UP OF THREE ROWS: ROW1 = route, ROW2 = key & destination, ROW3 = stop columns  --]
+    <Cell aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="${numCols}"><route>${route?xml}</route></Cell>
+    <Cell aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="${keyLen}"><service-key>${key?cap_first?xml}</service-key></Cell>
+    <Cell aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="${destLen}"><destination>${dest?xml}</destination></Cell>
+  [#list columns as cl]
+    <Cell aid:table="cell" aid:theader="" aid:crows="1" aid:ccols="1"><table-header>${funct.getInDesignString(cl.getDescription())}
+<table-stop-id>[#if showStopIDs && !cl.hideStopId()]Stop ID ${cl.getStopId()?xml}[/#if]</table-stop-id></table-header></Cell>
+  [/#list]
+
+  [#-- PRINT THE TABLE CONTENTS - SCHEDULE TIMES --]
+  [#assign rowNum = 1]
+  [#list rows as rw]
+   [#list 0..N as i]
+    <arrival-time aid:table="cell" aid:crows="1" aid:ccols="1">${funct.getXmlTime(rw, i)}</arrival-time>
+   [/#list]
+   [#assign rowNum = 1 + rowNum]
+  [/#list]
+[#-- IF THERE ARE ANY FOOTNOTES, PRINT THEM IN A SINGLE FOOTER ROW --]
+[#if footnotes?has_content]
+<Cell aid:table="cell" aid:tfooter="" aid:crows="1" aid:ccols="${numCols}">[#list footnotes as fn]<footnote>[#if fn.getSymbol()?exists]<fn>${fn.getSymbol()?xml}&#x0009;</fn>[/#if]${fn.getFormattedNote()?default("")?replace("&", "&amp;")?replace("\"", "&quot;")?replace("'", "&apos;")}[#if fn_has_next]</footnote>[#else]</footnote></Cell>[/#if]
+[/#list][/#if]
+</Table>[/#macro]

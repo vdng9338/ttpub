@@ -1,0 +1,559 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ConfigureWsdotDataTest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ConfigureWsdotDataTest</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/ttpub/timetable.config?oldRoute=1&oldDir=North&oldKey=Weekday&oldDate=1-1-2007&submit=update+page&route=Island+Transit---1&date=1-1-2007&dir=North&key=Weekday&useRoute=true&useDir=true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Island Transit - Harbor Station Loop</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Island Transit - Harbor Station Loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Morning Loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>sland Transit - Harbor Station Loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Evening Loop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Harbor Station</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Harbor Station</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>A6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Departs from Whidbey General Hospital on Main St</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Island Transit - Oak Harbor</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Island Transit - Oak Harbor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>A7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>B7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//tr[11]/td[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Departs from West Beach and La Mesa</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Departs from WalMart at Erie St</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip stops at Whidbey Island Bank Main and 4th St</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Whidbey Seatac Shuttle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//body/table[2]/tbody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Trailways - Boise & Spokane</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Northwestern Trailways -- 737</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>T8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip begins at Tacoma-Amtrak</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>West</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>*4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>This trip ends at Tacoma-Amtrak</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Greyhound -- 1318</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>East</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Greyhound -- 6502</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Greyhound -- 1430</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip stops at GREYHOUND - KELSO WA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip stops at GREYHOUND - KELSO WA</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Greyhound -- 5548</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>West</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Greyhound -- 1277</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>East</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Amtrak Coast Starlight</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak Coast Starlight</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Los Angeles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak Coast Starlight</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Los Angeles</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Amtrak Cascades</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak Cascades</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Seattle and Vancouver BC</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip ends at Fairhaven Transportation Center - Bellingham</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip stops at Oregon City - Amtrak</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak Cascades</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Portland and Eugene</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Amtrak Empire Builder</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak Empire Builder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Configure</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Amtrak Cascades</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>North</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>route</td>
+	<td>label=Amtrak I-5 Trips</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//tr[13]/td[19]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak I-5 Trips</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Seattle and Vancouver BC</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Portland</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Fairhaven</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Richmond</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Trip stops at Oregon City - Amtrak</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>South</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Amtrak I-5 Trips</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>to Portland and Eugene</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//tr[11]/td[18]</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

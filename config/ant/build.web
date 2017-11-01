@@ -1,0 +1,77 @@
+  <target name="tt-config-defaults" unless="tt.config.dir">
+     <property name="tt.config.dir" value="${config.dir}"/>
+     <property name="webxml.dir"    value="${config.dir}"/>
+     <property name="war.file"      value="../${project.dir}.war"/>
+
+     <antcall target="config-copier">
+        <param name="directory" value="${tt.config.dir}"/>
+        <param name="flat"      value="true"/>       
+     </antcall>
+  </target>
+
+
+  <!-- ================================================================== -->
+  <!-- W A R                                                              -->
+  <!-- ================================================================== -->
+  <target name="war" description="Create the WAR file" depends="init, prep-web, tt-config-defaults">  
+
+    <!-- WAR CREATION -->
+    <war destfile="${war.file}" 
+         webxml="${webxml.dir}/web.xml"
+         basedir="${build.dir}"
+         includes="${doc.dir}/index.html"
+    >
+      <zipfileset dir="${tt.config.dir}"       prefix="WEB-INF/classes/"  includes="TimeTableProperties.properties"/>
+      <zipfileset dir="${src.dir}/templates"   prefix="templates"/>
+      <zipfileset dir="${src.dir}/org/timetablepublisher/view/web/html/js/" prefix="templates/include" includes="google-keys.js"/>
+      <zipfileset dir="${html.dir}"            prefix=""/>
+      <zipfileset dir="${tt.config.dir}"       prefix=""  includes="index.html"/>      
+
+      <!-- NOTE: multiple lib directives are to force all jars into WEB-INF/lib directory -->
+      <lib dir="${lib.dir}">
+         <include name="*.jar"/>
+      </lib>
+      <lib dir="${lib.dir}/freemarker">
+         <include name="*.jar"/>
+      </lib>
+      <lib dir="${lib.dir}/opencsv">
+         <include name="*.jar"/>
+      </lib>
+      <lib dir="${lib.dir}/iText">
+         <include name="*.jar"/>
+      </lib>
+
+      <classes dir="${build.classes.dir}">
+         <exclude name="hibernate.cfg.xml"/>
+         <exclude name="TimeTableProperties.properties"/>         
+      </classes>
+
+      <webinf dir="${build.classes.dir}">
+         <include name="*.properties"/>
+         <exclude name="TimeTableProperties.properties"/>
+      </webinf>
+    </war>
+
+    <echo>                                                  </echo>
+    <echo>  A WAR file (Web ARchive) was created for you in </echo>
+    <echo>  the directory above.     It is called           </echo>
+    <echo>                                                  </echo>
+    <echo>      ${war.file}                                 </echo>
+    <echo>                                                  </echo>
+    <echo>  To use it with Tomcat, copy the .war file to    </echo>
+    <echo>  the webapps directory in the Tomcat tree        </echo>
+    <echo>  (assuming a standard Tomcat installation) and   </echo>
+    <echo>  then restart Tomcat.  To access the page        </echo>
+    <echo>  point you browser to                            </echo>
+    <echo>                                                  </echo>
+    <echo>   http://yourHost:8080/${project.dir}            </echo>
+    <echo>                                                  </echo>
+    <echo>  If you have any questions, don't hesitate to ask:</echo>
+    <echo>      Frank Purcell (purcellf@trimet.org)          </echo>
+    <echo>                                                   </echo>
+  </target>
+
+
+  <target name="prep-web">
+     <delete file="${war.file}"/>
+  </target>
