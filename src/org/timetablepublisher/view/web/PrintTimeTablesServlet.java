@@ -34,6 +34,8 @@ import org.timetablepublisher.view.ZipTimeTables;
 import org.timetablepublisher.view.pdf.PdfMultiTableDoc;
 import org.timetablepublisher.view.pdf.TrimetPdfDesignImpl;
 
+import fr.vdng9338.gtfs.ttpubmod.FrenchPdfDesignImpl;
+
 @SuppressWarnings("unchecked")
 public class PrintTimeTablesServlet extends FreemarkerBaseServlet
 {
@@ -154,7 +156,7 @@ public class PrintTimeTablesServlet extends FreemarkerBaseServlet
         
         try
         {
-            pdf = new PdfMultiTableDoc(new TrimetPdfDesignImpl(), baos, params.getDate());
+            pdf = new PdfMultiTableDoc(new FrenchPdfDesignImpl(), baos, params.getDate());
             
             // create N schedules with 2..N number of time points (good for creating InDesign Templates)
             for(HttpSelectedTableParams sel : selected)

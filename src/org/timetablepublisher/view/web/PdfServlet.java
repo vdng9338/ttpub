@@ -25,6 +25,8 @@ import org.timetablepublisher.utils.Params;
 import org.timetablepublisher.view.pdf.PdfDesign;
 import org.timetablepublisher.view.pdf.TrimetPdfDesignImpl;
 
+import fr.vdng9338.gtfs.ttpubmod.FrenchPdfDesignImpl;
+
 /**
  * If you want to avoid that your Servlet times out, 
  * you should use this ProgressServlet.
@@ -95,7 +97,7 @@ public class PdfServlet extends HttpServlet implements Constants
     {
         TimesTable tt = TimeTableFactory.create(params);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();            
-        PdfDesign pdf = new TrimetPdfDesignImpl();
+        PdfDesign pdf = new FrenchPdfDesignImpl();
         pdf.makeDocument(tt, baos);
         return baos;
     }
