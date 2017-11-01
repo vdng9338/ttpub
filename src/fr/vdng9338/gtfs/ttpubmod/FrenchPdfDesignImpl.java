@@ -145,7 +145,7 @@ public class FrenchPdfDesignImpl extends PdfDesignImpl implements PdfDesign
         int timeInt = row.getTime(index);
         int hours = (timeInt / 3600) % 24;
         int minutes = (timeInt / 60) % 60;
-        String time = hours + ":" + minutes;
+        String time = hours + ":" + (minutes < 10 ? "0" : "") + minutes;
         if(mark != null)
         {
             if(toRight)
