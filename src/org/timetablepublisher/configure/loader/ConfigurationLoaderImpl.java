@@ -78,7 +78,7 @@ public class ConfigurationLoaderImpl implements ConfigurationLoader, Constants
         LOGGER.log(DEBUG, "Loading configuration from " + csvDir);
         
         // Copy defaults if needed
-        String defaultPath = "/org/gtfs/configure/";
+        String defaultPath = "/org/gtfs/blank-config/";
         for(String s : DEFAULT_FILES) {
             File to = new File(csvDir, s);
             if(!to.exists())
