@@ -44,6 +44,8 @@ public class ConfigurationCacheSingleton implements Constants
         {
             LOGGER.log(SEVERE, "ERROR: Couldn't find CSV directory: " + m_csvDefaultDir);
             LOGGER.log(DEBUG, " via property " + TimeTableProperties.CONFIGURE_DIRECTORY);
+            new File(m_csvDefaultDir).mkdirs();
+            cl = getData(m_csvDefaultDir);
         }
     }
    

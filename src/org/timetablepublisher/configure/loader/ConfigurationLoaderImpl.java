@@ -7,9 +7,13 @@
 package org.timetablepublisher.configure.loader;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.InputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -43,15 +47,47 @@ import au.com.bytecode.opencsv.CSVWriter;
 public class ConfigurationLoaderImpl implements ConfigurationLoader, Constants
 {
     private static final Logger LOGGER = Logger.getLogger(ConfigurationLoaderImpl.class.getCanonicalName());
+    private static final String[] DEFAULT_FILES = new String[]{"ActiveServiceKeys.csv", "CullTrips.csv", "InterliningNotes.csv", "MergeTPNotes.csv", "PhantomTimePoint.csv", "RouteNames.csv", "TimePoints.csv", "ComboRoutes.csv", "EffectiveDate.csv", "LoopFillIn.csv", "PatternNotes.csv", "RenameTimePoint.csv", "RouteNotes.csv", "TripNotes.csv"};
 
     protected Hashtable<Class, List<Configure>> m_data   = new Hashtable<Class, List<Configure>>();
     protected Hashtable<Class, Boolean>         m_dirty  = new Hashtable<Class, Boolean>();
     protected Hashtable<Class, Boolean>         m_ignore = new Hashtable<Class, Boolean>();
     protected String m_csvDir = null;
 
+    private static void copyResource(String resourceName, File dest) throws IOException {
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            //is = new FileInputStream(source);
+            is = ConfigurationLoaderImpl.class.getResourceAsStream(resourceName);
+            os = new FileOutputStream(dest);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+        } finally {
+            is.close();
+            os.close();
+        }
+    }
+
     public ConfigurationLoaderImpl(String csvDir)    
     {
         setCsvDir(csvDir);
+        LOGGER.log(DEBUG, "Loading configuration from " + csvDir);
+        
+        // Copy defaults if needed
+        String defaultPath = "/org/gtfs/configure/";
+        for(String s : DEFAULT_FILES) {
+            File to = new File(csvDir, s);
+            if(!to.exists())
+                try {
+                    copyResource(defaultPath + s, to);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+        }
         
         FileReader reader = null;
         try 
