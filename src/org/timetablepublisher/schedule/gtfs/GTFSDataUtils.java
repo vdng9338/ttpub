@@ -8,6 +8,7 @@ package org.timetablepublisher.schedule.gtfs;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.logging.Logger;
@@ -67,10 +68,25 @@ public class GTFSDataUtils
     public static Hashtable<String,List<String>> getTripStops(GTFSDataLoader loader, Agency agency, boolean allStops)
     {
         Hashtable<String,List<String>> retVal = new Hashtable<String,List<String>>();
-        
+
         List stopList = loader.getData(agency, StopTimes.class);            
         if(stopList != null)
         {
+            Collections.sort((List<StopTimes>) stopList, new Comparator<StopTimes>() {
+                @Override
+                public int compare(StopTimes s1, StopTimes s2) {
+                    if(s1.getTrip() == null) {
+                        if(s2.getTrip() != null)
+                            return -1;
+                        else
+                            return s1.getStopSequence() - s2.getStopSequence();
+                    }
+                    else if(!s1.getTrip().equals(s2.getTrip()))
+                        return s1.getTrip().compareTo(s2.getTrip());
+                    else
+                        return s1.getStopSequence() - s2.getStopSequence();
+                }
+            });
             String       thisTrip = "XXX";
             List<String> thisTPs  = null;
             boolean      hasTimePointInfo = false;
@@ -111,7 +127,7 @@ public class GTFSDataUtils
                 thisTPs.add(s.getStopID());
             }                
         }
-        
+
         return retVal;
     }   
 
@@ -458,7 +474,7 @@ public class GTFSDataUtils
     public static List<Stop> getRouteStops(GTFSDataLoader loader, String agencyName, String routeID, DirType dir, KeyType key, List<String> activeServiceKeys, boolean bypassConfig, String date, boolean allStops)
     {
         List<Stop> retVal = new ArrayList<Stop>();
-        
+
         Agency agency = loader.getAgency(agencyName);
         
         // TODO: geeze, this getTripStops call looks inefficient...maybe it's only called once at startup?
