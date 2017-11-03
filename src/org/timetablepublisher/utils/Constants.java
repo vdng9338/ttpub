@@ -54,11 +54,11 @@ public interface Constants
     public static final Date   NEXT_WEEK             = new Date(NOW.getTime() + ONE_WEEK_MILLI);
     public static final Date   NEXT_MONTH            = new Date(NOW.getTime() + (ONE_WEEK_MILLI * 4) + (ONE_DAY_MILLI * 2));    
     
-    public static final String DATE_FORMAT           = "MM-dd-yyyy";
-    public static final String DATE_TIME_FORMAT      = "M.d.yy_k.m";
-    public static final String DATE_TIME_FORMAT_NICE = "MM.dd.yyyy 'at' h:mm:a z";
-    public static final String PRETTY_DATE_FORMAT    = "MMMM d, yyyy";
-    public static final String PRETTY_DT_FORMAT      = PRETTY_DATE_FORMAT + " 'at' h:mm:a z";
+    public static final String DATE_FORMAT           = "dd-MM-yyyy";
+    public static final String DATE_TIME_FORMAT      = "d.M.yy_k.m";
+    public static final String DATE_TIME_FORMAT_NICE = "dd.MM.yyyy 'à' H:mm z";
+    public static final String PRETTY_DATE_FORMAT    = "d MMMM yyyy";
+    public static final String PRETTY_DT_FORMAT      = PRETTY_DATE_FORMAT + " 'à' H:mm z";
     public static final SimpleDateFormat dateSDF     = new SimpleDateFormat(DATE_FORMAT);
     public static final SimpleDateFormat dateTimeSDF = new SimpleDateFormat(DATE_TIME_FORMAT);
     public static final SimpleDateFormat PRETTY_DATE = new SimpleDateFormat(PRETTY_DATE_FORMAT);

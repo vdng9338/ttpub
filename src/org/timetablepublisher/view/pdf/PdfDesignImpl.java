@@ -93,12 +93,12 @@ abstract public class PdfDesignImpl implements PdfDesign
             // page number
             cb.setFontAndSize(helv, 8);
             cb.setTextMatrix(document.left(), textBase);
-            cb.showText("Page #" + writer.getPageNumber());
+            cb.showText("Page " + writer.getPageNumber());
 
             
             // create date
             SimpleDateFormat dt = new SimpleDateFormat(Constants.DATE_TIME_FORMAT_NICE);
-            String created = "Created on: " + dt.format(new Date());
+            String created = "Créé le " + dt.format(new Date());
             float center = ((document.right() - document.left()) / 2) - (20 + created.length() / 2);
             cb.setTextMatrix(center, textBase);
             cb.showText(created);
@@ -116,7 +116,7 @@ abstract public class PdfDesignImpl implements PdfDesign
         public String getEffectiveDateString()
         {
             SimpleDateFormat d = new SimpleDateFormat(Constants.PRETTY_DATE_FORMAT);
-            String date = "Effective: " + d.format(m_date);            
+            String date = "Valable le " + d.format(m_date);            
             return date;
         }
     }
